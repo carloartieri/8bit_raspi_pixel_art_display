@@ -104,6 +104,17 @@ Next, we need to install the OS onto the microSD card and download all of the dr
 	
 	Note that mistyping the above command can prevent the Raspberry Pi from booting, so type it in carefully! In this case, you can simply unplug the Pi to stop the display and plug it back in to restart.
 	
+## Updating
+
+When I get around to adding new animation routines, I'll update the Changelog below. In order to get these changes without having to redo a fresh install, you'll simply need to 'pull' the updates from github and relaunch the animation script. Upon logging into the Pi, run the following commands:
+
+```
+cd 8bit_raspi_pixel_art_display
+git pull origin
+cd ..
+```	
+
+Then run the animation routine as above.
 
 ## Credits, links, and resources
 
@@ -118,7 +129,7 @@ Next, we need to install the OS onto the microSD card and download all of the dr
 
 - Finally, thanks to all of the NES developers and publishers featured herein for the memories!
 
-## Change log
+## Changelog
 
 **2018.07.13**
 
