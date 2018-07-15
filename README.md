@@ -1,17 +1,45 @@
-## 8-bit Pixel Art Display Project
+# 8-bit Pixel Art Display Project
 
-#### Required components
+I've always thought that RGB LED panels are perfect for displaying old-school pixel art, so I decided to work on a little project intended to highlight some of my favorite Nintendo Entertainment System gaming memories via a montage of short, repeating animations using actual NES sprites.
+
+![MegaMan 2 Woodman Stage](images/example1.jpg)
+
+Several people have asked me to provide a description of how I built the project, so I've shared the animation code in this repo as well as a detailed guide below as to how I set it all up. As I add more art, I will continue to update this repo. I intend to provide better code documentation in the future as well, but what's here will allow people to reproduce the project.
+
+This is a labor of love that I'm putting together on my spare time. I'm a data scientist, not a software engineer, so you'll have to forgive any amateurish coding. I appreciate feedback, though I may not be able to address feature requests in a timely manner. The best place to reach me regarding this project is via message or DM on Twitter: [@DocBrownPhd](https://twitter.com/DocBrownPhD)
+
+Note that all of the art included herein is intended as an homage to old-school gaming, and is freely shared with the community under the [Creative Commons Attribution 4.0 International (CC BY 4.0) License](https://creativecommons.org/licenses/by/4.0/) (basically do whatever you want with it as long as you let people know where you got it). All characters, art, and other trademarks are the properties of their respective owners.
 
 
-- A microSD card
-- A microSD card reader (some computers have these built in, but if not I use something like [this](https://www.amazon.com/IOGEAR-MicroSD-Reader-Writer-GFR204SD/dp/B0046TJG1U/ref=sr_1_9?ie=UTF8&qid=1531610754&sr=8-9&keywords=microSd+card+reader)).
+## Required components
 
-http://www.thealmightyguru.com/Games/Hacking/Wiki/index.php/NES_Palette
+<center>![The hardware](images/example2.jpg)</center>
 
+I've listed the components that I used to build the display below. It may be possible to substitute some of the parts, such as using a Raspberry Pi 2 or a different display matrix, however, I haven't tested this and can't offer any guidance on what changes may be required to the descriptions below. I've provided links to the Adafruit store or Amazon for components as that's where I purchased the components.
 
+**Raspberry Pi**
 
+- [Raspberry Pi 3 B](https://www.adafruit.com/product/3055)
+- [Raspberry Pi Power Supply](https://www.adafruit.com/product/1995) 
+- [microSD card](https://www.amazon.com/Sandisk-MicroSDHC-Memory-Adapter-Packaging/dp/B001FXZTIY/ref=sr_1_3?ie=UTF8&qid=1531624103&sr=8-3&keywords=4+gb+micro+sd+card&dpID=41N04fRwLWL&preST=_SY300_QL70_&dpSrc=srch) - You'll need ~2 GB, so a 4 GB card is plenty
+- [microSD card reader](https://www.amazon.com/IOGEAR-MicroSD-Reader-Writer-GFR204SD/dp/B0046TJG1U/ref=sr_1_9?ie=UTF8&qid=1531610754&sr=8-9&keywords=microSd+card+reader) - Some computers have these built in
 
+**32 x 32 LED RGB display matrix**
 
+- [32 x 32 RGB LED Matrix Panel](https://www.adafruit.com/product/607) - Adafruit has a number of different available pixel sizes, I used the '4 mm pitch'.
+- [5V 4A Switching Power Supply](https://www.adafruit.com/product/1466) - Both the Pi and the display should be independently powered.
+- [Adafruit RGB Matrix HAT](https://learn.adafruit.com/adafruit-rgb-matrix-plus-real-time-clock-hat-for-raspberry-pi)
+	- The RGB Matrix HAT makes wiring the RGB LED Matrix to the Raspberry Pi very straighforward; however, **it does require some light soldering**. I was able to do this by buying a [cheap soldering iron](https://www.adafruit.com/product/180), and [this solder](https://www.adafruit.com/product/1930). I also found [Getting Started with Soldering](https://www.adafruit.com/product/3715) by Marc De Vinck very helpful. 	
+
+## Putting the hardware together
+
+Adafruit has a [step-by-step guide](https://learn.adafruit.com/adafruit-rgb-matrix-plus-real-time-clock-hat-for-raspberry-pi/assembly) on how to assemble the The RGB Matrix HAT. This is followed by another [step-by-step guide](https://learn.adafruit.com/adafruit-rgb-matrix-plus-real-time-clock-hat-for-raspberry-pi/driving-matrices) on how to connect the Raspberry Pi to the display. However, the following guide assumes the we stop at the end of 'Step 3. Connect RGB Matrix Data cable to IDC'. Setting up the Raspberry Pi and installing required software is handled below.
+
+**Note:** The software that Adafruit provides enables additional functions and custom settings for the RGB Matrix HAT that I'm not using in this project. If this is of interest, you may want to read the details in Steps 4 and beyond.
+
+## Setting up the software
+
+Next, we need to install the OS onto the microSD card and download all of the drivers and libraries required to run the animations. I've assumed zero familiarity with the Raspberry Pi ecosystem, so I've tried to be detailed. 
 
 1. **Download [Raspbian](https://www.raspberrypi.org/downloads/raspbian/), the Raspberry Pi operating system** 
 
@@ -56,10 +84,49 @@ http://www.thealmightyguru.com/Games/Hacking/Wiki/index.php/NES_Palette
 	sudo 8bit_raspi_pixel_art_display/install.sh
 	```
 
+5. **Run the animation script**
+
+	Now we need to make a decision. If you'd like to run the animation script manually by logging into the Pi, you can do so by typing:
+
+	```
+sudo python3 8bit_raspi_pixel_art_display/run_montage.py
+	```
+
+	By appending `-h` to the end of the above command, you can get a summary of the command line options available. In particular, if you'd like the individual animations to run longer, add `--cycles 1000` (or `2000`). Also, adding `--shuffle` shuffles the order of animation routines at startup. 
+	
+	If you'd like the montage to run in the background, such that you could ssh into the Raspberry Pi, turn it on and then log out, use the following command (adding desired options before the `&`):
+
+	```
+sudo nohup python3 8bit_raspi_pixel_art_display/run_montage.py &
+	```
+
+	However, both of the options above will have to be redone if the Pi is turned off. Alterntively, if you'd like the Pi to launch the animation code immediately upon boot-up, you'll have to edit the `/etc/rc.local` file (using a command such as `sudo vim /etc/rc.local`) to add the following command before the `exit 0` line:
+	
+	```
+	sudo /usr/bin/python3 /home/pi/8bit_raspi_pixel_art_display/run_montage.py --cycles 1000 --shuffle &
+	```
+	
+	Note that mistyping the above command can prevent the Raspberry Pi from booting, so type it in carefully! In this case, you can simply unplug the Pi to stop the display and plug it back in to restart.
+	
+
+## Credits, links, and resources
+
+- Information about the default NES palette RGB values was obtained from: 
+	
+	[http://www.thealmightyguru.com/Games/Hacking/Wiki/index.php/NES_Palette](http://www.thealmightyguru.com/Games/Hacking/Wiki/index.php/NES_Palette)
+	
+- Sprite and animation details were obtained from:
+	- [https://www.spriters-resource.com](https://www.spriters-resource.com)
+	- [http://www.nesmaps.com](http://www.nesmaps.com)
+	- FF DOT. The Pixel Art of FINAL FANTASY (2018). [Amazon link](https://www.amazon.com/DOT-Pixel-Art-FINAL-FANTASY/dp/4757555393/ref=sr_1_1?ie=UTF8&qid=1531626724&sr=8-1&keywords=ff+dot).
 
 
+## Change log
 
-		
+**2018.07.13**
+
+- Initial commit.
+- Added *Final Fantasy*, *MegaMan 2*, *The Adventure of Link*, and *Ninja Gaiden* animation routines.  
 		
 		
 		
