@@ -13,17 +13,17 @@ http://www.thealmightyguru.com/Games/Hacking/Wiki/index.php/NES_Palette
 
 
 
-1. **Download [Raspbian](https://www.raspberrypi.org/downloads/raspbian/), the Raspberry Pi operating system**. 
+1. **Download [Raspbian](https://www.raspberrypi.org/downloads/raspbian/), the Raspberry Pi operating system** 
 
 	A direct link to the latest stable 'lite' build can be found [here](https://downloads.raspberrypi.org/raspbian_lite_latest).
 
-2. **Put the image on a microSD card**. 
+2. **Put the image on a microSD card**
 		
 	Basically, this involves creating a bootable microSD card from the Raspbian image downloaded above. As an OS X user, my preferred method for doing this is using [ApplePi-Baker](https://www.tweaking4all.com/software/macosx-software/macosx-apple-pi-baker/). Follow the link to see instructions on its use, but basically you'll select the microSD card from the menu, choose the IMG file in the 'Pi-Ingredients: IMG Recipe' box, and click on 'Restore Backup'. 
 	
 	I used version 1.9.4 of ApplePi-Baker, which can be downloaded directly [here](https://www.tweaking4all.com/?wpfb_dl=94).
 
-3. Set up the Raspberry Pi
+3. **Set up the Raspberry Pi**
 	
 	Make sure that the Raspberry Pi isn't plugged in. Pop in the microSD card,  then make sure that the unit is connected via HDMI to a monitor and connected via USB to a keyboard. Plug the Power cable to the 5V plug on the HAT and allow the unit to boot to the login. The default username is `pi` and the password is `raspberry`. This should get you to the linux command line.
 	
@@ -46,12 +46,14 @@ http://www.thealmightyguru.com/Games/Hacking/Wiki/index.php/NES_Palette
 
 	4. Navigate to `Finish` then type `sudo reboot` to reboot the Raspberry Pi. Login as before.
 
-4. Install some core system software we'll need to get this github repo containing the animation code. Run the following commands, one at a time:
+4. **Install required software**
+
+	Download all of the software required to run the animation montage by running the following commands, one at a time (note that some of these will take a while):
 
 	```
 	sudo apt-get install -y vim tmux git
 	sudo git clone https://github.com/carloartieri/8bit_raspi_pixel_art_display.git
-	
+	sudo 8bit_raspi_pixel_art_display/install.sh
 	```
 
 
