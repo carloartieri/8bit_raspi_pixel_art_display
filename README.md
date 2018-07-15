@@ -127,6 +127,8 @@ Then run the animation routine as above.
 	- [http://www.nesmaps.com](http://www.nesmaps.com)
 	- FF DOT. The Pixel Art of FINAL FANTASY (2018). [Amazon link](https://www.amazon.com/DOT-Pixel-Art-FINAL-FANTASY/dp/4757555393/ref=sr_1_1?ie=UTF8&qid=1531626724&sr=8-1&keywords=ff+dot).
 
+- The actual code that drives the display matrix is hzeller's rpi-rgb-led-matrix library, available at: [https://github.com/hzeller/rpi-rgb-led-matrix](https://github.com/hzeller/rpi-rgb-led-matrix)
+
 - Finally, thanks to all of the NES developers and publishers featured herein for the memories!
 
 ## Changelog
