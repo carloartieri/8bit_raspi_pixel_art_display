@@ -46,6 +46,16 @@ http://www.thealmightyguru.com/Games/Hacking/Wiki/index.php/NES_Palette
 
 	4. Navigate to `Finish` then type `sudo reboot` to reboot the Raspberry Pi. Login as before.
 
+4. Install some core system software we'll need to get this github repo containing the animation code. Run the following commands, one at a time:
+
+	```
+	sudo apt-get install -y vim tmux git
+	sudo git clone https://github.com/carloartieri/8bit_raspi_pixel_art_display.git
+	
+	```
+
+
+
 
 		
 		
