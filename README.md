@@ -13,7 +13,7 @@ Note that all of the art included herein is intended as an homage to old-school 
 
 ## Required components
 
-<center>![The hardware](images/example2.jpg)</center>
+![The hardware](images/example2.jpg)
 
 I've listed the components that I used to build the display below. It may be possible to substitute some of the parts, such as using a Raspberry Pi 2 or a different display matrix, however, I haven't tested this and can't offer any guidance on what changes may be required to the descriptions below. I've provided links to the Adafruit store or Amazon for components as that's where I purchased the components.
 
@@ -88,23 +88,18 @@ Next, we need to install the OS onto the microSD card and download all of the dr
 
 	Now we need to make a decision. If you'd like to run the animation script manually by logging into the Pi, you can do so by typing:
 
-	```
-sudo python3 8bit_raspi_pixel_art_display/run_montage.py
-	```
+		sudo python3 8bit_raspi_pixel_art_display/run_montage.py
+
 
 	By appending `-h` to the end of the above command, you can get a summary of the command line options available. In particular, if you'd like the individual animations to run longer, add `--cycles 1000` (or `2000`). Also, adding `--shuffle` shuffles the order of animation routines at startup. 
 	
 	If you'd like the montage to run in the background, such that you could ssh into the Raspberry Pi, turn it on and then log out, use the following command (adding desired options before the `&`):
 
-	```
-sudo nohup python3 8bit_raspi_pixel_art_display/run_montage.py &
-	```
+		sudo nohup python3 8bit_raspi_pixel_art_display/run_montage.py &
 
 	However, both of the options above will have to be redone if the Pi is turned off. Alterntively, if you'd like the Pi to launch the animation code immediately upon boot-up, you'll have to edit the `/etc/rc.local` file (using a command such as `sudo vim /etc/rc.local`) to add the following command before the `exit 0` line:
 	
-	```
-	sudo /usr/bin/python3 /home/pi/8bit_raspi_pixel_art_display/run_montage.py --cycles 1000 --shuffle &
-	```
+		sudo /usr/bin/python3 /home/pi/8bit_raspi_pixel_art_display/run_montage.py --cycles 1000 --shuffle &
 	
 	Note that mistyping the above command can prevent the Raspberry Pi from booting, so type it in carefully! In this case, you can simply unplug the Pi to stop the display and plug it back in to restart.
 	
@@ -127,12 +122,3 @@ sudo nohup python3 8bit_raspi_pixel_art_display/run_montage.py &
 
 - Initial commit.
 - Added *Final Fantasy*, *MegaMan 2*, *The Adventure of Link*, and *Ninja Gaiden* animation routines.  
-		
-		
-		
-		
-		 	 
-	
-	
-
- 
