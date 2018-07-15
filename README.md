@@ -110,7 +110,7 @@ When I get around to adding new animation routines, I'll update the Changelog be
 
 ```
 cd 8bit_raspi_pixel_art_display
-git pull origin
+sudo git pull origin
 cd ..
 ```	
 
