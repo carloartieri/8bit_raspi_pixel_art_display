@@ -133,7 +133,12 @@ Then run the animation routine as above.
 
 ## Changelog
 
+**2018.07.14**
+- Added *Blaster Master* and *Dragon Warrior* animation routines. 
+
 **2018.07.13**
 
 - Initial commit.
-- Added *Final Fantasy*, *MegaMan 2*, *The Adventure of Link*, and *Ninja Gaiden* animation routines.  
+- Added *Final Fantasy*, *MegaMan 2*, *The Adventure of Link*, and *Ninja Gaiden* animation routines.
+
+ 
