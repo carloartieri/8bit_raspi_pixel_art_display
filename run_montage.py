@@ -19,6 +19,8 @@ from sprites.zelda2 import zelda2_animation
 from sprites.finalfantasy import finalfantasy_animation
 from sprites.megaman2 import megaman2_animation
 from sprites.ninjagaiden import ninjagaiden_animation
+from sprites.blastermaster import blastermaster_animation
+from sprites.dragonwarrior import dragonwarrior_animation
 
 def parse_arguments():
 
@@ -64,7 +66,9 @@ def main():
     scenes = [zelda2_animation, 
               finalfantasy_animation,
               megaman2_animation,
-              ninjagaiden_animation]
+              ninjagaiden_animation,
+              blastermaster_animation,
+              dragonwarrior_animation]
 
     if shuffle:
         np.random.shuffle(scenes)
