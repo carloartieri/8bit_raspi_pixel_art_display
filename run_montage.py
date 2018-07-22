@@ -21,6 +21,7 @@ from sprites.megaman2 import megaman2_animation
 from sprites.ninjagaiden import ninjagaiden_animation
 from sprites.blastermaster import blastermaster_animation
 from sprites.dragonwarrior import dragonwarrior_animation
+from sprites.supermariobros3 import smb3_animation
 
 def parse_arguments():
 
@@ -68,7 +69,8 @@ def main():
               megaman2_animation,
               ninjagaiden_animation,
               blastermaster_animation,
-              dragonwarrior_animation]
+              dragonwarrior_animation,
+              smb3_animation]
 
     if shuffle:
         np.random.shuffle(scenes)
