@@ -29,7 +29,8 @@ I've listed the components used to build the display below. It may be possible t
 - [32 x 32 RGB LED Matrix Panel](https://www.adafruit.com/product/607) - Adafruit has a number of different available pixel sizes, I used the '4 mm pitch'.
 - [5V 4A Switching Power Supply](https://www.adafruit.com/product/1466) - Both the Pi and the display should be independently powered.
 - [Adafruit RGB Matrix HAT](https://learn.adafruit.com/adafruit-rgb-matrix-plus-real-time-clock-hat-for-raspberry-pi)
-	- The RGB Matrix HAT makes wiring the RGB LED Matrix to the Raspberry Pi very straighforward; however, **it does require some light soldering**. I was able to do this by buying a [cheap soldering iron](https://www.adafruit.com/product/180), and [this solder](https://www.adafruit.com/product/1930). I also found [Getting Started with Soldering](https://www.adafruit.com/product/3715) by Marc De Vinck very helpful. 	
+	- The RGB Matrix HAT makes wiring the RGB LED Matrix to the Raspberry Pi very straighforward; however, **it does require some light soldering**. I was able to do this by buying a [cheap soldering iron](https://www.adafruit.com/product/180), and [this solder](https://www.adafruit.com/product/1930). I also found [Getting Started with Soldering](https://www.adafruit.com/product/3715) by Marc De Vinck very helpful. 
+- [CR1220 coin cell battery](https://www.amazon.com/Energizer-CR1220-Drain-lithuim-Battery/dp/B003CU3E2Q/ref=sr_1_3?ie=UTF8&qid=1532292025&sr=8-3&keywords=cr1220+battery) (for the RGB Matrix HAT)	
 
 ## Putting the hardware together
 
@@ -133,7 +134,13 @@ Then run the animation routine as above.
 
 ## Changelog
 
+**2018.07.22**
+
+- Added *Super Mario Bros. 3* animation routine.
+- Added missing CR1220 coin cell battery from required hardware components.
+
 **2018.07.14**
+
 - Added *Blaster Master* and *Dragon Warrior* animation routines. 
 
 **2018.07.13**
