@@ -214,9 +214,9 @@ Zelda2BG01 = sprite(
 )
 
 zelda2_animation = animation_settings(
-    sprite_list=[[LinkLeft03, 
-                  LinkLeft04, 
-                  LinkLeft02],
+    sprite_list=[[LinkWalkLeft03, 
+                  LinkWalkLeft04, 
+                  LinkWalkLeft02],
                   ],
     bg_sprites=[Zelda2BG01],
     xoffs=[[0, 0, 0,],
