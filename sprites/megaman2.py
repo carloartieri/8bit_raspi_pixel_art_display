@@ -145,7 +145,7 @@ MegaMan02RunLeft03 = sprite(
     ]    
 )
 
-megaman2bg_1 = sprite(
+MegaMan2BG01 = sprite(
     palette = { 
         "r":NES_PALETTE_HEX[1, 7],
         "b":NES_PALETTE_HEX[0, 14],
@@ -191,15 +191,20 @@ megaman2bg_1 = sprite(
 )
 
 megaman2_animation = animation_settings(
-    sprite_list=[MegaMan02RunLeft01.hflip(),
-                 MegaMan02RunLeft02.hflip(),
-                 MegaMan02RunLeft03.hflip(),
-                 MegaMan02RunLeft02.hflip()],
-    bg_sprite=megaman2bg_1,
-    xoff=(0, 1, 3, 1),
-    yoff=0,
+    sprite_list=[[MegaMan02RunLeft01.hflip(),
+                  MegaMan02RunLeft02.hflip(),
+                  MegaMan02RunLeft03.hflip(),
+                  MegaMan02RunLeft02.hflip()],
+                ],
+    bg_sprites=[MegaMan2BG01],
+    xoffs=[[0, 1, 3, 1],
+          ],
+    yoffs=[[0, 0, 0, 0],
+          ],
     frame_time=0.035,
     spbg_ratio=3,
     center=True,
-    bg_scroll_speed=(1, 0)
+    bg_scroll_speed=(1, 0),
+    cycles_per_char=5,
+    reversible="horizontal",
     )

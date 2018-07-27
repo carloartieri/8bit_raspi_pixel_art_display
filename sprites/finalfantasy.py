@@ -118,7 +118,7 @@ FF1MonkFieldSouth01 = sprite(
 
 FF1MonkFieldSouth02 = FF1MonkFieldSouth01.hflip(rows=range(8, 16))
 
-ffbg_1 = sprite(
+FinalFantasyBG01 = sprite(
     palette = {
         "r":NES_PALETTE_HEX[1, 10],
         "n":NES_PALETTE_HEX[1, 8],
@@ -166,24 +166,30 @@ ffbg_1 = sprite(
     ]    
 )
 
-steps = 4
-slist = [FF1WarriorFieldSouth01,
-         FF1WarriorFieldSouth02] * steps +\
-        [FF1BlackMageFieldSouth01,
-         FF1BlackMageFieldSouth02] * steps +\
-        [FF1MonkFieldSouth01, 
-         FF1MonkFieldSouth02] * steps +\
-        [FF1WhiteMageFieldSouth01,
-         FF1WhiteMageFieldSouth02] * steps
-
 finalfantasy_animation = animation_settings(
-    sprite_list=slist,
-    bg_sprite=ffbg_1,
-    xoff=0,
-    yoff=0,
+    sprite_list=[[FF1WarriorFieldSouth01,
+                  FF1WarriorFieldSouth02],
+                 [FF1BlackMageFieldSouth01,
+                  FF1BlackMageFieldSouth02],
+                 [FF1MonkFieldSouth01, 
+                  FF1MonkFieldSouth02],
+                 [FF1WhiteMageFieldSouth01,
+                  FF1WhiteMageFieldSouth02],
+                ],
+    bg_sprites=[FinalFantasyBG01],
+    xoffs=[[0, 0],
+           [0, 0],
+           [0, 0],
+           [0, 0]], 
+    yoffs=[[0, 0],
+           [0, 0],
+           [0, 0],
+           [0, 0]],
     frame_time=0.055,
     spbg_ratio=4,
     center=True,
     bg_scroll_speed=(0, -1),
+    cycles_per_char=5,
+    reversible=False,
     )
 

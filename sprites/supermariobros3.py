@@ -235,7 +235,7 @@ TanookiMarioRunRight03 = sprite(
     ]    
 )
 
-smb3bg_1 = sprite(
+SuperMarioBros3BG01 = sprite(
     palette = { 
         "b":NES_PALETTE_HEX[0, 13],
         "p":NES_PALETTE_HEX[3, 1],
@@ -281,15 +281,20 @@ smb3bg_1 = sprite(
 )
 
 smb3_animation = animation_settings(
-    sprite_list=[TanookiMarioWalkRight01,
+    sprite_list=[[TanookiMarioWalkRight01,
                  TanookiMarioWalkRight02,
                  TanookiMarioWalkRight03,
                  TanookiMarioWalkRight02],
-    bg_sprite=smb3bg_1,
-    xoff=0,
-    yoff=0,
+                ],
+    bg_sprites=[SuperMarioBros3BG01],
+    xoffs=[[0, 0, 0, 0],
+          ],
+    yoffs=[[0, 0, 0, 0],
+          ],
     frame_time=0.04,
     spbg_ratio=2,
     center=True,
-    bg_scroll_speed=(1, 0)
+    bg_scroll_speed=(1, 0),
+    cycles_per_char=5,
+    reversible="horizontal",
     )
