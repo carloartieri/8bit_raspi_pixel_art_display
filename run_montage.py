@@ -67,7 +67,7 @@ def main():
 
     args = parse_arguments()
 
-        shuffle = args.shuffle
+    shuffle = args.shuffle
     
     scenes = [
               zelda2_animation, 
