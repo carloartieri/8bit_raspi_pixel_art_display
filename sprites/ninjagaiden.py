@@ -85,7 +85,7 @@ RyuClimb02 = sprite(
     ]    
 )
 
-ngbg_1 = sprite(
+NinjaGaidenBG01 = sprite(
     palette = {
         "b":NES_PALETTE_HEX[0, 13],
         "g":NES_PALETTE_HEX[1, 0],
@@ -134,7 +134,7 @@ ngbg_1 = sprite(
 )
 
 
-ngbg_2 = sprite(
+NinjaGaidenBG02 = sprite(
     palette = {
         "b":NES_PALETTE_HEX[0, 13],
         "g":NES_PALETTE_HEX[1, 0],
@@ -187,12 +187,18 @@ ngbg_2 = sprite(
 )
 
 ninjagaiden_animation = animation_settings(
-    sprite_list=[RyuClimb01, RyuClimb02],
-    bg_sprite=ngbg_2,
-    xoff=0,
-    yoff=(1, 0),
+    sprite_list=[[RyuClimb01, RyuClimb02],
+                ],
+    bg_sprites=[NinjaGaidenBG01, 
+                NinjaGaidenBG02],
+    xoffs=[[0, 0],
+          ],
+    yoffs=[[1, 0],
+          ],
     frame_time=0.05,
     spbg_ratio=3,
     center=True,
-    bg_scroll_speed=(0, 1)
+    bg_scroll_speed=(0, 1),
+    cycles_per_char=5,
+    reversible=False,
     )

@@ -34,10 +34,12 @@ dispmatrix = rgb.RGBMatrix(options=options)
 
 # Define animation settings tuple
 animation_settings = namedtuple("animation_settings", ("sprite_list "  
-                                                       "bg_sprite "
-                                                       "xoff "
-                                                       "yoff "
+                                                       "bg_sprites "
+                                                       "xoffs "
+                                                       "yoffs "
                                                        "frame_time "
                                                        "spbg_ratio "
                                                        "center "
-                                                       "bg_scroll_speed"))
+                                                       "bg_scroll_speed "
+                                                       "cycles_per_char "
+                                                       "reversible"))

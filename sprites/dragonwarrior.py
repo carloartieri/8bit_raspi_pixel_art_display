@@ -3,7 +3,7 @@ sys.path.append("../")
 from settings import (NES_PALETTE_HEX, animation_settings)
 from core import sprite
 
-DWHeroPrincess01 = sprite(
+DWHeroPrincessSouth01 = sprite(
     palette = { 
         "b":NES_PALETTE_HEX[0, 1],
         "r":NES_PALETTE_HEX[0, 7],
@@ -32,7 +32,7 @@ DWHeroPrincess01 = sprite(
     ]    
 )
 
-DWHeroPrincess02 = sprite(
+DWHeroPrincessSouth02 = sprite(
     palette = { 
         "b":NES_PALETTE_HEX[0, 1],
         "r":NES_PALETTE_HEX[0, 7],
@@ -61,7 +61,7 @@ DWHeroPrincess02 = sprite(
     ]    
 )
 
-dwbg_1 = sprite(
+DragonWarriorBG01 = sprite(
     palette = { 
         "b":NES_PALETTE_HEX[0, 13],
         "e":NES_PALETTE_HEX[2, 9],
@@ -110,13 +110,18 @@ dwbg_1 = sprite(
 )
 
 dragonwarrior_animation = animation_settings(
-    sprite_list=[DWHeroPrincess01, DWHeroPrincess02],
-    bg_sprite=dwbg_1,
-    xoff=0,
-    yoff=0,
+    sprite_list=[[DWHeroPrincessSouth01, DWHeroPrincessSouth02]
+                ],
+    bg_sprites=[DragonWarriorBG01],
+    xoffs=[[0, 0],
+          ],
+    yoffs=[[0, 0],
+          ],
     frame_time=0.05,
     spbg_ratio=5,
     center=True,
     bg_scroll_speed=(0, -1),
+    cycles_per_char=10,
+    reversible=False,
     )
 

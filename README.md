@@ -134,6 +134,12 @@ Then run the animation routine as above.
 
 ## Changelog
 
+**2018.07.27**
+
+- Refactored code to allow for multiple possible backgrounds per scene and option to choose random sprite or cycle through all available sprites.
+- Added three additional scene transitions (diagonal wipe, cross swirl, and checkerboard).
+- Added *CastleVania 3* animation routine. 
+
 **2018.07.22**
 
 - Added *Super Mario Bros. 3* animation routine.

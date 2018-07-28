@@ -3,10 +3,7 @@ sys.path.append("../")
 from settings import (NES_PALETTE_HEX, animation_settings)
 from core import sprite
 
-from settings import (NES_PALETTE_HEX, animation_settings)
-from core import sprite
-
-Sophia01 = sprite(
+SophiaLeft01 = sprite(
     palette = { 
         "b":NES_PALETTE_HEX[0, 13],
         "w":NES_PALETTE_HEX[3, 0],
@@ -35,7 +32,7 @@ Sophia01 = sprite(
     ]    
 )
 
-Sophia02 = sprite(
+SophiaLeft02 = sprite(
     palette = { 
         "b":NES_PALETTE_HEX[0, 13],
         "w":NES_PALETTE_HEX[3, 0],
@@ -64,7 +61,7 @@ Sophia02 = sprite(
     ]    
 )
 
-Sophia03 = sprite(
+SophiaLeft03 = sprite(
     palette = { 
         "b":NES_PALETTE_HEX[0, 13],
         "w":NES_PALETTE_HEX[3, 0],
@@ -93,7 +90,7 @@ Sophia03 = sprite(
     ]    
 )
 
-Sophia04 = sprite(
+SophiaLeft04 = sprite(
     palette = { 
         "b":NES_PALETTE_HEX[0, 13],
         "w":NES_PALETTE_HEX[3, 0],
@@ -121,7 +118,7 @@ Sophia04 = sprite(
     ]    
 )
 
-bmbg_1 = sprite(
+BlasterMasterBG01 = sprite(
     palette = { 
         "b":NES_PALETTE_HEX[0, 13],
         "r":NES_PALETTE_HEX[1, 8],
@@ -166,12 +163,17 @@ bmbg_1 = sprite(
 )
 
 blastermaster_animation = animation_settings(
-    sprite_list=[Sophia04, Sophia03, Sophia02, Sophia01],
-    bg_sprite=bmbg_1,
-    xoff=0,
-    yoff=0,
+    sprite_list=[[SophiaLeft04, SophiaLeft03, SophiaLeft02, SophiaLeft01]
+                ],
+    bg_sprites=[BlasterMasterBG01],
+    xoffs=[[0, 0, 0, 0]
+          ],
+    yoffs=[[0, 0, 0, 0]
+          ],
     frame_time=0.03,
     spbg_ratio=2,
     center=True,
     bg_scroll_speed=(-1, 0),
+    cycles_per_char=5,
+    reversible="horizontal",
     )

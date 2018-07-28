@@ -3,7 +3,7 @@ sys.path.append("../")
 from settings import (NES_PALETTE_HEX, animation_settings)
 from core import sprite
 
-LinkLeft01 = sprite(
+LinkWalkLeft01 = sprite(
     palette = { 
         "g":NES_PALETTE_HEX[1, 9],
         "b":NES_PALETTE_HEX[1, 8],
@@ -46,7 +46,7 @@ LinkLeft01 = sprite(
     ]    
 )
 
-LinkLeft02 = sprite(
+LinkWalkLeft02 = sprite(
     palette = { 
         "g":NES_PALETTE_HEX[1, 9],
         "b":NES_PALETTE_HEX[1, 8],
@@ -88,7 +88,7 @@ LinkLeft02 = sprite(
     ]    
 )
 
-LinkLeft03 = sprite(
+LinkWalkLeft03 = sprite(
     palette = { 
         "g":NES_PALETTE_HEX[1, 9],
         "b":NES_PALETTE_HEX[1, 8],
@@ -130,7 +130,7 @@ LinkLeft03 = sprite(
     ]    
 )
 
-LinkLeft04 = sprite(
+LinkWalkLeft04 = sprite(
     palette = { 
         "g":NES_PALETTE_HEX[1, 9],
         "b":NES_PALETTE_HEX[1, 8],
@@ -171,7 +171,7 @@ LinkLeft04 = sprite(
     ]    
 )
 
-zelda2bg_1 = sprite(
+Zelda2BG01 = sprite(
     palette = { 
         "r":NES_PALETTE_HEX[0, 6],
         "b":NES_PALETTE_HEX[0, 13],
@@ -214,12 +214,19 @@ zelda2bg_1 = sprite(
 )
 
 zelda2_animation = animation_settings(
-    sprite_list=[LinkLeft03, LinkLeft04, LinkLeft02],
-    bg_sprite=zelda2bg_1,
-    xoff=0,
-    yoff=(0, 1, 0),
+    sprite_list=[[LinkWalkLeft03, 
+                  LinkWalkLeft04, 
+                  LinkWalkLeft02],
+                  ],
+    bg_sprites=[Zelda2BG01],
+    xoffs=[[0, 0, 0,],
+          ],
+    yoffs=[[0, 1, 0],
+          ],
     frame_time=0.04,
     spbg_ratio=2,
     center=True,
-    bg_scroll_speed=(-1, 0)
+    bg_scroll_speed=(-1, 0),
+    cycles_per_char=5,
+    reversible="horizontal",
     )
