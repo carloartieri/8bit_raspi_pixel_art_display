@@ -77,9 +77,9 @@ def main():
               blastermaster_animation,
               dragonwarrior_animation,
               smb3_animation,
-              castlevania3_animation
-              dragonstrike_animation
-              excitebike_animation
+              castlevania3_animation,
+              dragonstrike_animation,
+              excitebike_animation,
              ]
 
     #Adjust cycles for cycleall
