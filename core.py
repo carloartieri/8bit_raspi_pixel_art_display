@@ -104,7 +104,7 @@ def display_sprite(dispmatrix, sprite, bg_sprite=None, xoff=0, yoff=0, center=Tr
     array = np.where(array == (1, 1, 1), bg_array, array)        
 
     if display:    
-        dispmatrix.SetImage(Image.fromarray(array_disp, mode="RGB"))
+        dispmatrix.SetImage(Image.fromarray(array, mode="RGB"))
     
     return array
 

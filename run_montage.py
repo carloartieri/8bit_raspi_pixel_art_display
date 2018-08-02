@@ -23,6 +23,8 @@ from sprites.blastermaster import blastermaster_animation
 from sprites.dragonwarrior import dragonwarrior_animation
 from sprites.supermariobros3 import smb3_animation
 from sprites.castlevania3 import castlevania3_animation
+from sprites.dragonstrike import dragonstrike_animation
+from sprites.excitebike import excitebike_animation
 
 def parse_arguments():
 
@@ -77,7 +79,9 @@ def main():
               blastermaster_animation,
               dragonwarrior_animation,
               smb3_animation,
-              castlevania3_animation
+              castlevania3_animation,
+              dragonstrike_animation,
+              excitebike_animation,
              ]
 
     #Adjust cycles for cycleall
