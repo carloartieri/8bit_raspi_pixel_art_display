@@ -134,6 +134,10 @@ Then run the animation routine as above.
 
 ## Changelog
 
+**2018.08.05**
+
+- Added new sprites and background to *Super Mario Bros. 3* animation routine.
+
 **2018.07.31**
 
 - Added new sprites and a new background to the *Dragon Warrior* animation routine.
