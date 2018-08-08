@@ -25,6 +25,7 @@ from sprites.supermariobros3 import smb3_animation
 from sprites.castlevania3 import castlevania3_animation
 from sprites.dragonstrike import dragonstrike_animation
 from sprites.excitebike import excitebike_animation
+from sprites.kirbysadventure import kirbysadventure_animation
 
 def parse_arguments():
 
@@ -82,6 +83,7 @@ def main():
               castlevania3_animation,
               dragonstrike_animation,
               excitebike_animation,
+              kirbysadventure_animation,
              ]
 
     #Adjust cycles for cycleall
