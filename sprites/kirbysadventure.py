@@ -1,0 +1,255 @@
+import sys
+sys.path.append("../")
+from settings import (NES_PALETTE_HEX, animation_settings)
+from core import sprite
+
+KirbyWalkRight01 = sprite(
+    palette = { 
+        "b":NES_PALETTE_HEX[0, 13],
+        "p":NES_PALETTE_HEX[3, 13],
+        "d":NES_PALETTE_HEX[2, 4],
+    },
+    matrix = [
+        "x5b5x6",
+        "x3b2d1p3d1b2x4",
+        "x2b1d1p7d1b1x3",
+        "x1b3p8b3x1",
+        "b1d1p2d1p3b1p1b1p1d1b1p1b1",
+        "b1p7b1p1b1p2b1p1b1",
+        "b1p7b1p1b1p2b1p1b1",
+        "b1d1p3d2p4d2b1d1b1",
+        "x1b2d1p9b2x1",
+        "x1b1d1p6b1p2d1b1x2",
+        "b1d1b1p9b3x1",
+        "b1d2b1p7d1b1d2b1",
+        "x1b1d2b1d1p3d1b2d3b1",
+        "x1b1d3b5d3b2x1",
+        "x2b1d2b1x4b3x3",
+        "x3b2x11",
+    ]    
+)
+
+KirbyWalkRight02 = sprite(
+    palette = { 
+        "b":NES_PALETTE_HEX[0, 13],
+        "p":NES_PALETTE_HEX[3, 13],
+        "d":NES_PALETTE_HEX[2, 4],
+    },
+    matrix = [
+        "x4b6x5",
+        "x3b2d1p4d1b1x3",
+        "x2b1d1p8b1x2",
+        "x1b1d1p9b1x2",
+        "x1b1p7b1p1b1p1b1x1",
+        "b1p8b1p1b1p1b2",
+        "b1p8b1p1b1p1b2",
+        "b1p3d1p1d2p4d1b2",
+        "b1d1p2b1p8b2",
+        "x1b1d1p1b1p5b1p2b2",
+        "x2b2d1p7d1b1x1",
+        "x3b2d1p5d1b1x2",
+        "x3b1d1b7x3",
+        "x4b1d4b1d1b1x3",
+        "x5b6x4",
+    ]    
+)
+
+KirbyWalkRight03 = sprite(
+    palette = { 
+        "b":NES_PALETTE_HEX[0, 13],
+        "p":NES_PALETTE_HEX[3, 13],
+        "d":NES_PALETTE_HEX[2, 4],
+    },
+    matrix = [
+        "x5b5x6",
+        "x3b2d1p3d1b2x4",
+        "x2b1d1p7d1b1x3",
+        "x2b1p9b1x3",
+        "x1b1d1p8b1p1b1x2",
+        "x1b1p9b1p1b1x2",
+        "x1b1p3d1b1p4b1p1b1x2",
+        "x1b1p5b1p1d2p2b1x2",
+        "x1b1d1p4b1p5b1x2",
+        "b3d1p2b1p4b1p1b1x2",
+        "b1d1b4p6d1b1x2",
+        "b1d2b1d1p6d1b2x2",
+        "b1d3b1d1p4d1b2d1b1x1",
+        "x1b1d2b7d4b1",
+        "x2b2x5b1d5b1",
+        "x10b5x1",
+    ]    
+)
+
+KirbyPuffedWalkRight01 = sprite(
+    palette = { 
+        "b":NES_PALETTE_HEX[0, 13],
+        "p":NES_PALETTE_HEX[3, 13],
+        "d":NES_PALETTE_HEX[2, 4],
+    },
+    matrix = [
+        "x8b6x9",
+        "x2b6d1p4d1b2x1b3x3",
+        "x1b1d1p2d1b1p8d1b1d1p1d1b1x2",
+        "b1d1p4d1p13d1b1x1",
+        "b1p20b1x1",
+        "b1p20b1x1",
+        "b1d1p12b1p1b1p3d1b1x1",
+        "x1b1d1p11b1p1b1p3b1x2",
+        "b1d1p12b1p1b1p3d1b1x1",
+        "b1p8d2p7d2p1b1x1",
+        "b1p11b1p8b1x1",
+        "b1p12b1p3d1p3b1x1",
+        "b1d1p11b5p2d1b1x1",
+        "b1d1p11b1p6d1b1x1",
+        "x1b1d1p9b1p6d1b1x2",
+        "x1b2d1p15d1b2x1",
+        "b1d1b1d2p13d1b1d2b1",
+        "b1d2b1d2p11d2b1d2b1",
+        "b1d3b1d2p8d3b1d2b2",
+        "b1d4b2d2p4d3b2d3b1x1",
+        "x1b1d4b2d6b2d3b2x2",
+        "x2b1d2b1x2b6x2b3x4",
+        "x3b2x18",
+    ]    
+)
+
+KirbyPuffedWalkRight02 = sprite(
+    palette = { 
+        "b":NES_PALETTE_HEX[0, 13],
+        "p":NES_PALETTE_HEX[3, 13],
+        "d":NES_PALETTE_HEX[2, 4],
+    },
+    matrix = [
+        "x8b6x8",
+        "x4b5d1p3d1b2x6",
+        "x3b1d1p3d1b1p5d1b2x4",
+        "x2b1d1p5b1p7d1b1x3",
+        "x2b1p6d1p8d1b1x2",
+        "x2b1d1p15d1x2",
+        "x1b1d1b1p12b1p1b1d1b1x1",
+        "x1b1d1p1d1p11b1p1b1p1b1x1",
+        "b1d1p14b1p1b1p1d1b1",
+        "b1p12d2p6b1",
+        "b1p14b1p5b1",
+        "b1p15b1p2d1p1b1",
+        "b1d1p14b4d1b1",
+        "b1d1p14b1p3d1b1",
+        "x1b1d1p12b1p3d1b1x1",
+        "x1b1d1p16d1b1x1",
+        "x2b1d1p14d1b1x2",
+        "x2b1d2p12d2b1x2",
+        "x3b1d3p1b6p1d3b1x3",
+        "x4b2d1b1d6b1d1b2x4",
+        "x6b1d8b1x6",
+        "x7b1d6b1x7",
+        "x8b6x8",
+    ]    
+)
+
+KirbyPuffedWalkRight03 = sprite(
+    palette = { 
+        "b":NES_PALETTE_HEX[0, 13],
+        "p":NES_PALETTE_HEX[3, 13],
+        "d":NES_PALETTE_HEX[2, 4],
+    },
+    matrix = [
+        "x9b7x7",
+        "x7b2d1p1d1b5x6",
+        "x5b2d1p3b1d1p3d1b2x4",
+        "x4b1d1p5b1p5b1d1b1x3",
+        "x3b1d1p6d1p5b1p1d1b1x2",
+        "x3b1p13b1p2b1x2",
+        "x2b1d1p12d1p2b1d1b1x1",
+        "x2b1p16b1p1b1x1",
+        "x1b1d1p16b1p1d1b1",
+        "x1b1p14d2p1d1p2b1",
+        "x1b1p16b1p3b1",
+        "x1b1p17b1p1d1b1",
+        "x1b1d1p16b4",
+        "x1b1d1p16b1p1d1b1",
+        "x2b1d1p14b1p1d1b1x1",
+        "x1b2d1p16d1b1x1",
+        "b1d2b1d1p14d1b1x2",
+        "b1d2b1d2p12d2b1x2",
+        "b2d2b1d3p8d3b1d1b1x1",
+        "x1b1d3b2d3p4d3b2d3b1",
+        "x2b2d3b2d6b2d5b1",
+        "x4b3x2b6x1b6x1",
+    ]    
+)
+
+KirbysAdventureBG01 = sprite(
+    palette = { 
+        "b":NES_PALETTE_HEX[0, 13],
+        "y":NES_PALETTE_HEX[2, 8],
+        "l":NES_PALETTE_HEX[3, 7],
+        "r":NES_PALETTE_HEX[0, 8],
+
+        "g":NES_PALETTE_HEX[1, 10],
+        "k":NES_PALETTE_HEX[2, 9],
+        "d":NES_PALETTE_HEX[0, 11],
+    },
+    matrix = [
+        "b16" + "b16",
+        "b4d1b2d2b5d2" + "b4d1b2d2b5d2",
+        "b2g2b2d3b6d1" + "b2g2b2d3b6d1",
+        "g4b2d4b3d1b2" + "g4b2d4b3d1b2",
+        "g3b1d2b1d2b2d3b1g1" + "g3b1d2b1d2b2d3b1g1",
+        "g3b1d2b4d1b1d2b1g1" + "g3b1d2b4d1b1d2b1g1",
+        "g2b1d4b1d2b1g1b3g1" + "g2b1d4b1d2b1g1b3g1",
+        "g2b3d2b1d2b1g1b1d1b2" + "g2b3d2b1d2b1g1b1d1b2",
+        "b3g1b4d1b1g2b1d1b2" + "b3g1b4d1b1g2b1d1b2",
+        "g1b1g3b1g2b1g2b4g1" + "g1b1g3b1g2b1g2b4g1",
+        "g2b1g1b2g2b1g1b2g1b1g2" + "g2b1g1b2g2b1g1b2g1b1g2",
+        "g2b3g2b1g1b1g2b2g2" + "g2b3g2b1g1b1g2b2g2",
+        "g1b2g4b2g3b1g1b1g1" + "g1b2g4b2g3b1g1b1g1",
+        "b2g1b1g2b1d1b1g3b1g1b2" + "b2g1b1g2b1d1b1g3b1g1b2",
+        "g4b2d1b1g3b1g3b1" + "g4b2d1b1g3b1g3b1",
+        "g4b1d2b1g3b1g3b1" + "g4b1d2b1g3b1g3b1",
+        "g4b1d2b1g2b1g3b1g1" + "g4b1d2b1g2b1g3b1g1",
+        "g4b1d2b1g2b5g1" + "g4b1d2b1g2b5g1",
+        "g3b1d3b3k2b1g1b1g1" + "g3b1d3b3k2b1g1b1g1",
+        "g3b1d3b1k4b1g1b1g1" + "g3b1d3b1k4b1g1b1g1",
+        "g2b1d3b1k4b1g2b1g1" + "g2b1d3b1k4b1g2b1g1",
+        "g2b1d2b2k4b1g3b1" + "g2b1d2b2k4b1g3b1",
+        "b2d2b1g1b1k3b1g4b1" + "b2d2b1g1b1k3b1g4b1",
+        "k1b1d1b1g2b2k2b3g1b1k1" + "k1b1d1b1g2b2k2b3g1b1k1",
+        "b1d1b1g3b5k1b3k1" + "b1d1b1g3b5k1b3k1",        
+        "b16" + "b16",
+        "l16" + "l16",
+        "y16" + "y16",
+        "b16" + "b16",
+        "r16" + "r16",
+        "r3y5r3y5" + "r3y5r3y5",
+        "y2r3y5r3y3" + "y2r3y5r3y3",
+    ]    
+)
+
+kirbysadventure_animation = animation_settings(
+    sprite_list=[[KirbyWalkRight01,
+                  KirbyWalkRight01,
+                  KirbyWalkRight02,
+                  KirbyWalkRight03,
+                  KirbyWalkRight03,
+                  KirbyWalkRight02,],
+                [KirbyPuffedWalkRight01,
+                 KirbyPuffedWalkRight01,
+                 KirbyPuffedWalkRight02,
+                 KirbyPuffedWalkRight03,
+                 KirbyPuffedWalkRight03,
+                 KirbyPuffedWalkRight02,],
+                ],
+    bg_sprites=[KirbysAdventureBG01],
+    xoffs=[[0, 0, 0, 0, 0, 0],
+           [0, 0, 0, 0, 0, 0],
+          ],
+    yoffs=[[2, 2, 2, 2, 2, 2],
+           [-1, -1, -1, -1, -1, -1],
+          ],
+    frame_time=0.055,
+    spbg_ratio=2,
+    center=True,
+    bg_scroll_speed=(1, 0),
+    cycles_per_char=5,
+    reversible="horizontal",
+    )

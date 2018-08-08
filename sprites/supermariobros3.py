@@ -438,6 +438,52 @@ SuperMarioBros3BG02 = sprite(
     ]    
 )
 
+SuperMarioBros3BG03 = sprite(
+    palette = { 
+        "b":NES_PALETTE_HEX[0, 13],
+        "w":NES_PALETTE_HEX[3, 0],
+        "g":NES_PALETTE_HEX[1, 0],
+        "d":NES_PALETTE_HEX[0, 0],
+        
+    },
+    matrix = [
+        "b1g1w1b1w1g1b1g2b1d1g1b1d2b1" + "d1b6d1b4d4",
+        "b1g1w1b1w1g1b1g2b1d1g1b1d2b1" + "d1b6d1b4d1b3",
+        "b1g1w1b1w1g1b1g2b1d1g1b1d2b1" + "d1b6d6b3",
+        "b1g1w1b1w1g1b1g2b1d1g1b1d2b1" + "d8b4d1b3",
+        "b1g1w1b1w1g1b1g2b1d1g1b1d2b1" + "b4d9b3",
+        "b1g1w1b1w1g1b1g2b1d1g1b1d2b1" + "b4d2b6d1b3",
+        "b1g1w1b1w1g1b1g2b1d1g1b1d2b1" + "b4d6b2d1b3",
+        "b1g1w1b1w1g1b1g2b1d1g1b1d2b1" + "d6b3d1b2d4",
+        "b1g1w1b1w1g1b1g2b1d1g1b1d2b1" + "d1b2d1b5d1b5d1",
+        "b1g1w1b1w1g1b1g2b1d1g1b1d2b1" + "d1b2d1b5d1b5d1",
+        "b1g1w1b1w1g1b1g2b1d1g1b1d2b1" + "d1b2d1b5d1b5d1",
+        "b1g1w1b1w1g1b1g2b1d1g1b1d2b1" + "d1b2d1b5d1b5d1",
+        "b1g1w1b1w1g1b1g2b1d1g1b1d2b1" + "d4b5d7",
+        
+        "b1g1w1b1w1g1b1g2b1d1g1b1d2b1" + "d4b5d6b1",
+        "b1g1w1b1w1g1b1g2b1d1g1b1d2b1" + "d1b2d7b3d2b1",
+        "b1g1w1b1w1g1b1g2b1d1g1b1d2b1" + "d1b6d1b5d2b1",
+        "b1g1w1b1w1g1b1g2b1d1g1b1d2b1" + "d1b6d1b4d4",
+        "b1g1w1b1w1g1b1g2b1d1g1b1d2b1" + "d1b6d1b4d1b3",
+        "b1g1w1b1w1g1b1g2b1d1g1b1d2b1" + "d1b6d6b3",
+        "b1g1w1b1w1g1b1g2b1d1g1b1d2b1" + "d8b4d1b3",
+        "b1g1w1b1w1g1b1g2b1d1g1b1d2b1" + "b4d9b3",
+        "b1g1w1g1w1g8d2b1" + "b4d2b6d1b3",
+        "b2d1w1d1w1d8b2" + "b4d6b2d1b3",
+        "b3g1b1g1b4g1b5" + "d6b3d1b2d4",
+        "b2w2g1w1g3d1g1d1b1d1b2" + "d1b2d1b5d1b5d1",
+        "b2g1d9b1d1b2" + "d1b2d1b5d1b5d1",
+        "b1w2g1w1g4d1g1d2b1d1b1" + "d1b2d1b5d1b5d1",
+        "b1w2g1w1g4d1g1d2b1d1b1" + "d1b2d1b5d1b5d1",
+        "b1w2g1w1g4d1g1d2b1d1b1" + "d4b5d7",
+        
+        "b16" + "b16",
+        "w16" + "w16",
+        "b16" + "b16",
+    ]    
+)
+
 smb3_animation = animation_settings(
     sprite_list=[[TanookiMarioWalkRight01,
                  TanookiMarioWalkRight02,
@@ -448,7 +494,8 @@ smb3_animation = animation_settings(
                   FrogMarioWalkRight03],
                 ],
     bg_sprites=[SuperMarioBros3BG01,
-                SuperMarioBros3BG02],
+                SuperMarioBros3BG02,
+                SuperMarioBros3BG03],
     xoffs=[[0, 0, 0, 0],
            [0, 0, 0],
           ],

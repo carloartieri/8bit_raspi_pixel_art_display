@@ -166,6 +166,50 @@ FinalFantasyBG01 = sprite(
     ]    
 )
 
+FinalFantasyBG02 = sprite(
+    palette = { 
+        "b":NES_PALETTE_HEX[0, 13],
+        "w":NES_PALETTE_HEX[3, 0],
+        "g":NES_PALETTE_HEX[0, 0],
+        "l":NES_PALETTE_HEX[0, 1],
+    },
+    matrix = [
+        "b8" + "b16" +                                    "b8",
+        "w5b1w2" + "b2g1b1g1b1g1b3g1b1g1b1g1b1" +         "b1w7",
+        "g5b1w1g1" + "b1g1b1g1b1g1b1g1b1g1b1g1b1g1b1g1" + "b1w1g6",
+        "g5b1w1g1" + "b2g1b1g1b1g1b3g1b1g1b1g1b1" +       "b1w1g6",
+        "g5b1w1g1" + "b1g1b1g1b1g1b1g1b1g1b1g1b1g1b1g1" + "b1w1g6",
+        "g5b1w1g1" + "b2g1b1g1b1g1b3g1b1g1b1g1b1" +       "b1w1g6",
+        "g5b1w1g1" + "b1g1b1g1b1g1b1g1b1g1b1g1b1g1b1g1" + "b1w1g6",
+        "g5b1w1g1" + "b2g1b1g1b1g1b3g1b1g1b1g1b1" +       "b1w1g6",
+        "b6w1g1" + "b16" +                                "b1w1g6",
+        "b1w6g1" + "b2g1b1g1b1g1b3g1b1g1b1g1b1" +         "b1w1g6",
+        "b1w6g1" + "b1g1b1g1b1g1b1g1b1g1b1g1b1g1b1g1" +   "b1w1g6",
+        "b1w1g6" + "b2g1b1g1b1g1b3g1b1g1b1g1b1" +         "b1w1g6",
+        "b1w1g6" + "b1g1b1g1b1g1b1g1b1g1b1g1b1g1b1g1" +   "b1w1g6",
+        "b1w1g6" + "b2g1b1g1b1g1b3g1b1g1b1g1b1" +         "b1w1g6",
+        "b1w1g6" + "b1g1b1g1b1g1b1g1b1g1b1g1b1g1b1g1" +   "b1w1g6",
+        "b8" + "b2g1b1g1b1g1b3g1b1g1b1g1b1" +             "b8",
+        
+        "b8" + "b16" + "b8",
+        "b8" + "b2g1b1g1b1g1b3g1b1g1b1g1b1" + "b3l1b4",
+        "b8" + "b1g1b1g1b1g1b1g1b1g1b1g1b1g1b1g1" + "b8",
+        "b8" + "b2g1b1g1b1g1b3g1b1g1b1g1b1" + "b8",
+        "b8" + "b1g1b1g1b1g1b1g1b1g1b1g1b1g1b1g1" + "b8",
+        "b8" + "b2g1b1g1b1g1b3g1b1g1b1g1b1" + "b8",
+        "b8" + "b1g1b1g1b1g1b1g1b1g1b1g1b1g1b1g1" + "b8",
+        "b8" + "b2g1b1g1b1g1b3g1b1g1b1g1b1" + "b8",
+        "b8" + "b16" + "b8",
+        "b8" + "b2g1b1g1b1g1b3g1b1g1b1g1b1" + "b8",
+        "b8" + "b1g1b1g1b1g1b1g1b1g1b1g1b1g1b1g1" + "b5l1b2",
+        "b6l1b1" + "b2g1b1g1b1g1b3g1b1g1b1g1b1" + "b8",
+        "b8" + "b1g1b1g1b1g1b1g1b1g1b1g1b1g1b1g1" + "b8",
+        "b2l1b5" + "b2g1b1g1b1g1b3g1b1g1b1g1b1" + "b8",
+        "b8" + "b1g1b1g1b1g1b1g1b1g1b1g1b1g1b1g1" + "b8",
+        "b8" + "b2g1b1g1b1g1b3g1b1g1b1g1b1" + "b8",
+    ]    
+)
+
 finalfantasy_animation = animation_settings(
     sprite_list=[[FF1WarriorFieldSouth01,
                   FF1WarriorFieldSouth02],
