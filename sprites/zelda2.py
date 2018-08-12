@@ -5,9 +5,9 @@ from core import sprite
 
 LinkWalkLeft01 = sprite(
     palette = { 
-        "g":NES_PALETTE_HEX[1, 9],
+        "g":NES_PALETTE_HEX[2, 10],
         "b":NES_PALETTE_HEX[1, 8],
-        "s":NES_PALETTE_HEX[3, 8],
+        "s":NES_PALETTE_HEX[3, 7],
     },
     matrix = [
         "x7b6x3",
@@ -48,9 +48,9 @@ LinkWalkLeft01 = sprite(
 
 LinkWalkLeft02 = sprite(
     palette = { 
-        "g":NES_PALETTE_HEX[1, 9],
+        "g":NES_PALETTE_HEX[2, 10],
         "b":NES_PALETTE_HEX[1, 8],
-        "s":NES_PALETTE_HEX[3, 8],
+        "s":NES_PALETTE_HEX[3, 7],
     },
     matrix = [
         "x7b6x3",
@@ -90,9 +90,9 @@ LinkWalkLeft02 = sprite(
 
 LinkWalkLeft03 = sprite(
     palette = { 
-        "g":NES_PALETTE_HEX[1, 9],
+        "g":NES_PALETTE_HEX[2, 10],
         "b":NES_PALETTE_HEX[1, 8],
-        "s":NES_PALETTE_HEX[3, 8],
+        "s":NES_PALETTE_HEX[3, 7],
     },
     matrix = [
         "x7b6x3",
@@ -132,9 +132,9 @@ LinkWalkLeft03 = sprite(
 
 LinkWalkLeft04 = sprite(
     palette = { 
-        "g":NES_PALETTE_HEX[1, 9],
+        "g":NES_PALETTE_HEX[2, 10],
         "b":NES_PALETTE_HEX[1, 8],
-        "s":NES_PALETTE_HEX[3, 8],
+        "s":NES_PALETTE_HEX[3, 7],
     },
     matrix = [
         "x6b6x4",
@@ -173,9 +173,9 @@ LinkWalkLeft04 = sprite(
 
 Zelda2BG01 = sprite(
     palette = { 
-        "r":NES_PALETTE_HEX[0, 6],
-        "b":NES_PALETTE_HEX[0, 13],
-        "l":NES_PALETTE_HEX[2, 6],
+        "g":NES_PALETTE_HEX[2, 10],
+        "b":NES_PALETTE_HEX[1, 8],
+        "s":NES_PALETTE_HEX[3, 7],
     },
     matrix = [
         "r15b1" + "b1l14b1",
@@ -213,12 +213,59 @@ Zelda2BG01 = sprite(
     ]    
 )
 
+Zelda2BG02 = sprite(
+    palette = { 
+        "b":NES_PALETTE_HEX[0, 13],
+        "g":NES_PALETTE_HEX[0, 11],
+        
+        "r":NES_PALETTE_HEX[1, 7],
+        "d":NES_PALETTE_HEX[0, 7],
+        "o":NES_PALETTE_HEX[0, 8],
+    },
+    matrix = [
+        "d4o1d2o1d2o2d1o3" + "b16",
+        "d4o1d1o2d3o1d1o3" + "b16",
+        "d1r1d5o1d1o1d1o5" + "b16",
+        "d6o2d1o1d1o1d1o3" + "b16",
+        "d6o2d1o3d1o3" + "b16",
+        "d1r1d2o1d2o1d1o1d1o5" + "b16",
+        "d7o1d1o1d1o5" + "b16",
+        "d1r1d5o1d1o3d1o1d1o1" + "b16",
+        "d4o1d2o1d1o1d1o5" + "b16",
+        "d4o1d1o2d1o1d1o1d1o3" + "b16",
+        "d7o1d1o1d1o3d1o1" + "b16",
+        "d1r1d5o3d1o1d1o1d1o1" + "b16",
+        "d1r1d2o1d2o1d1o5d1o1" + "b16",
+        "d7o1d1o1d1o1d1o3" + "b16",
+        "d9o1d1o5" + "b16",
+        "d1r1d3o1d1o1d1o1d1o5" + "b16",
+        
+        "b1g4b4g4b3" + "b1g4b4g4b3",
+        "g7b1g7b1" + "g7b1g7b1",
+        "b1g3b1g3b1g3b1g3" + "b1g3b1g3b1g3b1g3",
+        "b2g1b2g2b3g1b2g2b1" + "b2g1b2g2b3g1b2g2b1",
+        "g6b1g7b1g1" + "g6b1g7b1g1",
+        "g2b2g6b2g4" + "g2b2g6b2g4",
+        "g1b2g2b3g1b2g2b3" + "g1b2g2b3g1b2g2b3",
+        "b1g2b2g1b1g1b1g2b2g1b1g1" + "b1g2b2g1b1g1b1g2b2g1b1g1",
+        "g4b1g7b1g3" + "g4b1g7b1g3",
+        "g2b1g3b1g3b1g3b1g1" + "g2b1g3b1g3b1g3b1g1",
+        "b3g2b1g1b4g2b1g1b1" + "b3g2b1g1b4g2b1g1b1",
+        "g3b3g5b3g2" + "g3b3g5b3g2",
+        "g4b1g1b1g5b1g1b1g1" + "g4b1g1b1g5b1g1b1g1",
+        "g1b1g7b1g6" + "g1b1g7b1g6",
+        "g1b3g1b1g1b1g1b3g1b1g1b1" + "g1b3g1b1g1b1g1b3g1b1g1b1",
+        "g2b1g4b1g2b1g4b1" + "g2b1g4b1g2b1g4b1",
+    ]    
+)
+
 zelda2_animation = animation_settings(
     sprite_list=[[LinkWalkLeft03, 
                   LinkWalkLeft04, 
                   LinkWalkLeft02],
                   ],
-    bg_sprites=[Zelda2BG01],
+    bg_sprites=[Zelda2BG01,
+                Zelda2BG02],
     xoffs=[[0, 0, 0,],
           ],
     yoffs=[[0, 1, 0],
