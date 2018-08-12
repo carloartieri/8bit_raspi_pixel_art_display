@@ -469,7 +469,7 @@ megaman2_animation = animation_settings(
     bg_sprites=[MegaMan2BG01,
                 MegaMan2BG02],
     xoffs=[[0, 1, 3, 1],
-           [0, 0, 3, 0,],
+           [0, 1, 3, 1,],
            [0, 1, 2, 1,],
           ],
     yoffs=[[0, 0, 0, 0],
