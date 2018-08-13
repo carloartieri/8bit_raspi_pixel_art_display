@@ -40,7 +40,7 @@ MegaMan02StandRight = sprite(
 )
 
 
-MegaMan02RunLeft01 = sprite(
+MegaManRunLeft01 = sprite(
     palette = { 
         "b":NES_PALETTE_HEX[0, 13],
         "w":NES_PALETTE_HEX[2, 0],
@@ -73,8 +73,9 @@ MegaMan02RunLeft01 = sprite(
         "x6b9x9"
     ]    
 )
+MegaManRunRight01 = MegaManRunLeft01.hflip()
 
-MegaMan02RunLeft02 = sprite(
+MegaManRunLeft02 = sprite(
     palette = { 
         "b":NES_PALETTE_HEX[0, 13],
         "w":NES_PALETTE_HEX[2, 0],
@@ -109,9 +110,9 @@ MegaMan02RunLeft02 = sprite(
         "x6b6x4"
     ]    
 )
+MegaManRunRight02 = MegaManRunLeft02.hflip()
 
-
-MegaMan02RunLeft03 = sprite(
+MegaManRunLeft03 = sprite(
     palette = { 
         "b":NES_PALETTE_HEX[0, 13],
         "w":NES_PALETTE_HEX[2, 0],
@@ -144,6 +145,222 @@ MegaMan02RunLeft03 = sprite(
         "x1b9x11"
     ]    
 )
+MegaManRunRight03 = MegaManRunLeft03.hflip()
+
+MetalManRunLeft01 = sprite(
+    palette = { 
+        "b":NES_PALETTE_HEX[0, 13],
+        "y":NES_PALETTE_HEX[2, 8],
+        "r":NES_PALETTE_HEX[1, 5],
+        "w":NES_PALETTE_HEX[3, 0],
+        "s":NES_PALETTE_HEX[3, 7],
+    },
+    matrix = [
+        "x7b2x1b4x3b2x5",
+        "x6b1w2b1r4b1x1b1y1b1x5",
+        "x5b1w4b1r4b2y1b1x5",
+        "x5b1w1b1w2b1r5b1y1b1x5",
+        "x5b1w4b1r1b2r2y1b1x6",
+        "x6b1w2b1r1b1w2r1y2b1x6",
+        "x5b4r1b2w2r1y2b4x3",
+        "x5b1y1b1s1w1b2w1s1r2y1b1y3b1x2",
+        "x1b3x2b1r2s1w2s1r2b2y3r2b1x1",
+        "b1r3b1x1b1r7b2r1y2b1r3b1",
+        "b1r3b1x1b1r6b2r2b3r3b1",
+        "b1r3b2y1b1r3b3r3b1x1b1r3b1",
+        "x1b1r3y3b4r4b1x3b3x1",
+        "x2b1r3y2b1r6b3x1b2x3",
+        "x3b1r2y1b1x1b1r2b7y2b1x2",
+        "x4b3x3b8r1y3b1x1",
+        "x9b1r1b7r1y4b1",
+        "x8b1r3b6r1y1b1y2b1",
+        "x8b1y2r2b1x1b2r2b4x1",
+        "x7b3y3b1x2b3x5",
+        "x6b1y7b1x9",
+        "x6b9x9",
+    ]    
+)
+MetalManRunRight01 = MetalManRunLeft01.hflip()
+
+MetalManRunLeft02 = sprite(
+    palette = { 
+        "b":NES_PALETTE_HEX[0, 13],
+        "y":NES_PALETTE_HEX[2, 8],
+        "r":NES_PALETTE_HEX[1, 5],
+        "w":NES_PALETTE_HEX[3, 0],
+        "s":NES_PALETTE_HEX[3, 7],
+    },
+    matrix = [
+        "x2b2x1b4x3b2x2",
+        "x1b1w2b1r4b1x1b1y1b1x2",
+        "b1w4b1r4b2y1b1x2",
+        "b1w1b1w2b1r5b1y1b1x2",
+        "b1w4b1r1b2r2y1b1x3",
+        "x1b1w2b1r1b1w2r1y2b1x3",
+        "b4r1b2w2r1y2b1x3",
+        "b1y1b1s1w1b2w1s1r2y1b2x2",
+        "x1b1r2s1w2s1r2b2r2b1x1",
+        "x1b1r7b1r3y2b1",
+        "x1b1r6b1r2b1y3b1",
+        "x2b1r3b2r2b1r2y1b1x1",
+        "x1b1r1b3r2b2r4b1x1",
+        "x1b1r2b1r2b1r2b1r2b1x2",
+        "x2b4r1b1r4b1x3",
+        "x4b5r2b1x4",
+        "x4b7x5",
+        "x5b2r2b3x4",
+        "x6b1r4y1b1x3",
+        "x7b1y5b1x2",
+        "x7b3y3b1x2",
+        "x6b1y5b1x3",
+        "x6b6x4",
+    ]    
+)
+MetalManRunRight02 = MetalManRunLeft02.hflip()
+
+MetalManRunLeft03 = sprite(
+    palette = { 
+        "b":NES_PALETTE_HEX[0, 13],
+        "y":NES_PALETTE_HEX[2, 8],
+        "r":NES_PALETTE_HEX[1, 5],
+        "w":NES_PALETTE_HEX[3, 0],
+        "s":NES_PALETTE_HEX[3, 7],
+    },
+    matrix = [
+        "x3b2x1b4x3b2x6",
+        "x2b1w2b1r4b1x1b1y1b1x6",       
+        "x1b1w4b1r4b2y1b1x6",
+        "x1b1w1b1w2b1r5b1y1b1x6",
+        "x1b1w4b1r1b2r2y1b1x7",
+        "x2b1w2b1r1b1w2b1y2b1x7",
+        "x1b4r1b2w2b1y2b1x7",
+        "x1b1y1b1s1w1b2w1s1r2y1b2x6",
+        "x2b1r2s1w2s1b4y1s1b2x4",
+        "x2b2r4b1r3b2r3b1x3",
+        "x1b1r2b4r5b1r4b1x2",
+        "b1r5b1y3r4b1r3b1x2",
+        "b1r5y5r3b1r3b1x2",
+        "x1b1r3y5b1r3b4x3",
+        "x2b2r2y2b2r3b3y2b1x2",
+        "x3b6r2b4r1y3b1x1",
+        "x3b1r1b10r2y3b1",
+        "x2b1r3b9r2b1y2b1",
+        "x2b1y2r2b1x4b2r2b4x1",
+        "x1b3y3b1x5b3x5",
+        "b1y7b1x12",
+        "b9x12",
+    ]    
+)
+MetalManRunRight03 = MetalManRunLeft03.hflip()
+
+CrashManRunLeft01 = sprite(
+    palette = { 
+        "b":NES_PALETTE_HEX[0, 13],
+        "r":NES_PALETTE_HEX[1, 6],
+        "w":NES_PALETTE_HEX[3, 0],
+        "s":NES_PALETTE_HEX[3, 7],
+    },
+    matrix = [
+        "x14b6x12",
+        "x12b2r6b2x10",
+        "x11b1w2r3w3r2b1x9",
+        "x10b1w4r5w1r2b1x8",
+        "x9b1w5r1b2r2b3x9",
+        "x9b1w4r1b1w2b1r2b6x5",
+        "x8b1w4b2w3b1r1w1b1r1b1w3b2x3",
+        "x8b1w2b2s1b2w1s1b1r1w1b1r1b1w3b1r1b1x2",
+        "x9b3w1s1b2w1b1r1b2r1b1w3b1r3b1x1",
+        "b3x5b1r1b1s6b1r1b1r2b5r1w1r1b1x1",
+        "b1w2b2x3b1r1b1s1b4s1b2r3b1x2b1r1b1w1b1r1b1",
+        "b1w4b2x1b1r2b1s4b1r4b1x3b1r1b1w1b1r1b1",
+        "x1b1w3b1r1b1x1b1r2b4r5b1x3b1r5b1",
+        "x1b1w2b1r3b1w1b1r3b1w1b1r3b2x3b1r1b3r1b1",
+        "x2b2r4b1w2b2r1b1r1b1r2b1w1b1x1b4w3b2",
+        "x2b1r6b1w1b8w1b1w1b1r2b1w5b1",
+        "x3b1r1w2r2b2x2b2w5b1w1r4b1w4b1",
+        "x4b1r1w2r1b1x3b1w5b1w1r5b1w3b1x1",
+        "x5b4x4b1r1w3b1w1r2b1r3b2w2b1x1",
+        "x12b1r4b5r4b2w1b1x2",
+        "x12b1r5b1x3b1r3b1x1b1x3",
+        "x12b2r5b1x3b3x6",
+        "x11b1r7b1x12",
+        "x11b9x12",
+    ]    
+)
+CrashManRunRight01 = CrashManRunLeft01.hflip()
+
+CrashManRunLeft02 = sprite(
+    palette = { 
+        "b":NES_PALETTE_HEX[0, 13],
+        "r":NES_PALETTE_HEX[1, 6],
+        "w":NES_PALETTE_HEX[3, 0],
+        "s":NES_PALETTE_HEX[3, 7],
+    },
+    matrix = [
+        "x6b6x6",
+        "x4b2r6b2x4",
+        "x3b1w2r3w3r2b1x3",
+        "x2b1w4r5w1r2b1x2",
+        "x1b1w5r1b2r2b3x3",
+        "x1b1w4r1b1w2b1r2b1x4",
+        "b1w4b2w3b1r1w1b1x4",
+        "b1w2b2s1b2w1s1b1r1w1b1x4",
+        "x1b3w1s1b2w1b1r1b3x4",
+        "x2b1s6b1r1b1r2b1x3",
+        "x2b1s1b4s1b2r2b1w1b1x2",
+        "x2b2s4b1r4b1w2b1x1",
+        "x2b1r1b4r4b4w1b1",
+        "x3b1r2b1w1b1r2b2r3b2",
+        "x4b1r1b1r1b1r1b1r5b1x1",
+        "x4b6r2b1r3b1x1",
+        "x4b1w3b1r2b1w1b1r1b1x2",
+        "x4b1w2b3r1w1b1r2b1x2",
+        "x5b1w1b1w2b1r3b2x2",
+        "x6b2w3b1r1b1r2b1x1",
+        "x6b1w4b2r3b1x1",
+        "x6b1w2b2r5b1x1",
+        "x6b4r5b1x2",
+        "x7b1r6b1x3",
+        "x7b7x4",
+    ]    
+)
+CrashManRunRight02 = CrashManRunLeft02.hflip()
+
+CrashManRunLeft03 = sprite(
+    palette = { 
+        "b":NES_PALETTE_HEX[0, 13],
+        "r":NES_PALETTE_HEX[1, 6],
+        "w":NES_PALETTE_HEX[3, 0],
+        "s":NES_PALETTE_HEX[3, 7],
+    },
+    matrix = [
+        "x8b6x10",
+        "x6b2r6b2x8",
+        "x5b1w2r3w3r2b1x7",
+        "x4b1w4r5w1r2b1x6",
+        "x3b1w5r1b2r2b3x7",
+        "x3b1w4r1b1w2b1r2b1x8",
+        "x2b1w4b2w3b1r1w1b1x8",
+        "x2b1w2b2s1b2w1s1b1r1w1b3x6",
+        "x3b3w1s1b2w1b1r1b3r2b2x4",
+        "x4b1s6b1r1b1w1b1r1w2r1b1x3",
+        "x4b1s1b4s1b3w2b1r1w2r1b1x2",
+        "x5b1s4b1r2b1w2b1r5b1x1",
+        "x5b8w3b1r4b2x1",
+        "x3b2w1b1r4b2w3b1r3b1w1b1x1",
+        "x1b2w4b1r1b2r2b1w1b5w2b1x1",
+        "b1w6b1r1w3r2b3r3b1w2b1",
+        "x1b2w4b1r1b2r2b1w2r4b2w1b1",
+        "x3b2w1b1r4b2w3r5b3",
+        "x3b1r1b7w3r2b1r3b1x2",
+        "x3b1r2w2b1x3b1w1r2b1r4b1x2",
+        "x3b1r3b1x5b4r4b1x2",
+        "x1b2r5b1x8b1r3b1x2",
+        "b1r8b1x8b3x3",
+        "b10x14",
+    ]    
+)
+CrashManRunRight03 = CrashManRunLeft03.hflip()
 
 MegaMan2BG01 = sprite(
     palette = { 
@@ -190,18 +407,76 @@ MegaMan2BG01 = sprite(
     ]    
 )
 
+MegaMan2BG02 = sprite(
+    palette = { 
+        "b":NES_PALETTE_HEX[0, 13],
+        "u":NES_PALETTE_HEX[1, 1],
+        "l":NES_PALETTE_HEX[2, 1],
+        "d":NES_PALETTE_HEX[0, 2],
+        "w":NES_PALETTE_HEX[3, 0],
+    },
+    matrix = [
+        "b8d1u2d5" + "b8d1u2d5",
+        "d6b1d1u1d7" + "d6b1d1u1d7",
+        "d5b1d1u1d8" + "d5b1d1u1d8",
+        "b7u1d5u3" + "b7u1d5u3",
+        "u4d1u1d1b9" + "u4d1u1d1b9",
+        "d10u1b1d2u2" + "d10u1b1d2u2",
+        "d11u1d1u2d1" + "d11u1d1u2d1",
+        "d9u2d1b1d1u1d1" + "d9u2d1b1d1u1d1",
+        "b3d1u1d1u4d1b5" + "b3d1u1d1u4d1b5",
+        "d3b9u3d1" + "d3b9u3d1",
+        "d10b1u1d4" + "d10b1u1d4",
+        "d1b7d2b1u1d4" + "d1b7d2b1u1d4",
+        "b1d1u4d2b7d1" + "b1d1u4d2b7d1",
+        "d1u1d11u1d1b1" + "d1u1d11u1d1b1",
+        "d1u1d11u2b1" + "d1u1d11u2b1",
+        "b1d1u1d3u1d1u1d1u4b2" + "b1d1u1d3u1d1u1d1u4b2",
+        "d1b14d1" + "d1b14d1",
+        "d6b1d1u2d6" + "d6b1d1u2d6",
+        "d5b1d1u1d8" + "d5b1d1u1d8",
+        "b7u1d8" + "b7u1d8",
+        "u4d1u1d1b9" + "u4d1u1d1b9",
+        "d10u1b1d2u2" + "d10u1b1d2u2",
+        "d11u1d1u2d1" + "d11u1d1u2d1",
+        "d9u2d1b1d1u1d1" + "d9u2d1b1d1u1d1",
+        "b3d1u1d1u4d1b5" + "b3d1u1d1u4d1b5",
+        "d3b9u3d1" + "d3b9u3d1",
+        "d10b1u1d4" + "d10b1u1d4",
+
+        "b16" + "b16",
+        "b2u14" + "u14b2",
+        "b1u3w5u2w1u4" + "u3l5u1l4u2b1",
+        "b1u2w3u9l1" + "l1u10l3u1b1",
+        "b1u2w2u3l7u1" + "u1l12w1u1b1",
+    ]    
+)
+
 megaman2_animation = animation_settings(
-    sprite_list=[[MegaMan02RunLeft01.hflip(),
-                  MegaMan02RunLeft02.hflip(),
-                  MegaMan02RunLeft03.hflip(),
-                  MegaMan02RunLeft02.hflip()],
+    sprite_list=[[MegaManRunRight01,
+                  MegaManRunRight02,
+                  MegaManRunRight03,
+                  MegaManRunRight02],
+                 [MetalManRunRight01,
+                  MetalManRunRight02,
+                  MetalManRunRight03,
+                  MetalManRunRight02],
+                 [CrashManRunRight01,
+                  CrashManRunRight02,
+                  CrashManRunRight03,
+                  CrashManRunRight02],
                 ],
-    bg_sprites=[MegaMan2BG01],
+    bg_sprites=[MegaMan2BG01,
+                MegaMan2BG02],
     xoffs=[[0, 1, 3, 1],
+           [0, 1, 3, 1,],
+           [0, 1, 2, 1,],
           ],
     yoffs=[[0, 0, 0, 0],
+           [1, 1, 1, 1,],
+           [0, 0, 0, 0,],
           ],
-    frame_time=0.035,
+    frame_time=0.040,
     spbg_ratio=3,
     center=True,
     bg_scroll_speed=(1, 0),

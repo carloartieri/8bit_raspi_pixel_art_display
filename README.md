@@ -134,6 +134,12 @@ Then run the animation routine as above.
 
 ## Changelog (last 3)
 
+**2018.08.12**
+
+- Added Metal Man and Crash Man sprites as well as Flash Man stage background to *Mega Man 2* animation routine.
+- Added Blue Iron Knuckle sprite and Forest background to *Zelda 2* animation routine.
+- Added Jason out of Sophia and Area 3 background to *Blaster Master* animation routine.
+
 **2018.08.07**
 
 - Added *Kirby's Adventure* animation routine.
@@ -145,11 +151,5 @@ Then run the animation routine as above.
 - Added new sprites and a new background to the *Dragon Warrior* animation routine.
 - Added *AD&D Dragon Strike* and *Excitebike* animation routines. 
 - Fixed minor typo bug in display sprite code.
-
-**2018.07.27**
-
-- Refactored code to allow for multiple possible backgrounds per scene and option to choose random sprite or cycle through all available sprites.
-- Added three additional scene transitions (diagonal wipe, cross swirl, and checkerboard).
-- Added *Castlevania 3* animation routine. 
 
 See [complete Changelog here](changelog.md).

@@ -1,5 +1,11 @@
 ## Complete Changelog
 
+**2018.07.27**
+
+- Refactored code to allow for multiple possible backgrounds per scene and option to choose random sprite or cycle through all available sprites.
+- Added three additional scene transitions (diagonal wipe, cross swirl, and checkerboard).
+- Added *Castlevania 3* animation routine. 
+
 **2018.08.07**
 
 - Added *Kirby's Adventure* animation routine.

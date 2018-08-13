@@ -5,9 +5,9 @@ from core import sprite
 
 LinkWalkLeft01 = sprite(
     palette = { 
-        "g":NES_PALETTE_HEX[1, 9],
+        "g":NES_PALETTE_HEX[2, 10],
         "b":NES_PALETTE_HEX[1, 8],
-        "s":NES_PALETTE_HEX[3, 8],
+        "s":NES_PALETTE_HEX[3, 7],
     },
     matrix = [
         "x7b6x3",
@@ -48,9 +48,9 @@ LinkWalkLeft01 = sprite(
 
 LinkWalkLeft02 = sprite(
     palette = { 
-        "g":NES_PALETTE_HEX[1, 9],
+        "g":NES_PALETTE_HEX[2, 10],
         "b":NES_PALETTE_HEX[1, 8],
-        "s":NES_PALETTE_HEX[3, 8],
+        "s":NES_PALETTE_HEX[3, 7],
     },
     matrix = [
         "x7b6x3",
@@ -90,9 +90,9 @@ LinkWalkLeft02 = sprite(
 
 LinkWalkLeft03 = sprite(
     palette = { 
-        "g":NES_PALETTE_HEX[1, 9],
+        "g":NES_PALETTE_HEX[2, 10],
         "b":NES_PALETTE_HEX[1, 8],
-        "s":NES_PALETTE_HEX[3, 8],
+        "s":NES_PALETTE_HEX[3, 7],
     },
     matrix = [
         "x7b6x3",
@@ -132,9 +132,9 @@ LinkWalkLeft03 = sprite(
 
 LinkWalkLeft04 = sprite(
     palette = { 
-        "g":NES_PALETTE_HEX[1, 9],
+        "g":NES_PALETTE_HEX[2, 10],
         "b":NES_PALETTE_HEX[1, 8],
-        "s":NES_PALETTE_HEX[3, 8],
+        "s":NES_PALETTE_HEX[3, 7],
     },
     matrix = [
         "x6b6x4",
@@ -170,6 +170,179 @@ LinkWalkLeft04 = sprite(
         "x1b6x5b2x2",
     ]    
 )
+
+IronKnuckleWalkRightShieldUp01 = sprite(
+    palette = { 
+        "w":NES_PALETTE_HEX[3, 0],
+        "b":NES_PALETTE_HEX[2, 1],
+        "d":NES_PALETTE_HEX[0, 2],
+    },
+    matrix = [
+        "x5d2b4x5",
+        "x2w1x1d2b4w1b1x4",
+        "x2b1w2d1b6x4",
+        "x3b1w1d1b1d4x5",
+        "x4d2b2d4x4",
+        "x4d2b6d1w3",
+        "x2w3d3b4d1b2w1",
+        "x1w1d1b3d3b3d1b2w1",
+        "w1d1b2w1b2d4x1d3w1",
+        "w1d1b4d1b3d3b2w1",
+        "w1d1b3d1w1d1b3d2b2w1",
+        "w1d2b1d1b2w1d1b1d3b2w1",
+        "x1w1d3b4d1b2d3w1",
+        "x1w1d4b2d1b3d1b2w1",
+        "x1w2d1b1d2b1d1b2d2b2w1",
+        "x1w2d2b1d3b1d2x1d1b1w1",
+        "w3d8x3d1x1",
+        "w3d2b2d1b2w1d1x4",
+        "w2d10x4",
+        "w2d2b2d1b4w1d1x3",
+        "w2d11x3",
+        "w4d2b3d1b1d1x4",
+        "w2x2w1d5b1d1x4",
+        "w1x5d1b2d3x4",
+        "x5d5b1d1x4",
+        "x5d1b2w1d2x5",
+        "x5d2b2d1x6",
+        "x4d2b1d3x6",
+        "x4d1b4d1x6",
+        "x4d1b1d1b2w1d1x5",
+        "x5d1b4w1d1x4",
+        "x6d6x4",
+    ]    
+)
+IronKnuckleWalkLeftShieldUp01 = IronKnuckleWalkRightShieldUp01.hflip()
+
+IronKnuckleWalkRightShieldUp02 = sprite(
+    palette = { 
+        "w":NES_PALETTE_HEX[3, 0],
+        "b":NES_PALETTE_HEX[2, 1],
+        "d":NES_PALETTE_HEX[0, 2],
+    },
+    matrix = [
+        "x5d2b4x5",
+        "x2w1x1d2b4w1b1x4",
+        "x2b1w2d1b6x4",
+        "x3b1w1d1b1d4x5",
+        "x4d2b2d4x4",
+        "x4d2b6d1w3",
+        "x2w3d3b4d1b2w1",
+        "x1w1d1b3d3b3d1b2w1",
+        "w1d1b2w1b2d4x1d3w1",
+        "w1d1b4d1b3d3b2w1",
+        "w1d1b3d1w1d1b3d2b2w1",
+        "w1d2b1d1b2w1d1b1d3b2w1",
+        "x1w1d3b4d1b2d3w1",
+        "x1w1d4b2d1b3d1b2w1",
+        "x1w2d1b1d2b1d1b2d2b2w1",
+        "x1w2d2b1d3b1d2x1d1b1w1",
+        "w3d8x3d1x1",
+        "w3d2b2d1b2w1d1x4",
+        "w2d11x3",
+        "w2d2b2d1b5w1d1x2",
+        "w2d12x2",
+        "w3d2b3d2b2d1x3",
+        "w1x1w1d7b1d2x3",
+        "w1x2d3b1w1d3b1w1d1x2",
+        "x2d2b1d1b1d7x2",
+        "x2d1b3d2x1d1b2w1d1x2",
+        "x1d3b2d1x2d1b2w1d1x2",
+        "d2b2d2x3d5x2",
+        "d1b1d1b1d1x4d1b3d1x2",
+        "x1d1b2w1d1x3d1b1d1b1w1d1x1",
+        "x2d1b2d1x3d2b3w1d1",
+        "x3d2x4d7",
+    ]    
+)
+IronKnuckleWalkLeftShieldUp02 = IronKnuckleWalkRightShieldUp02.hflip()
+
+
+IronKnuckleWalkRightShieldDown01 = sprite(
+    palette = { 
+        "w":NES_PALETTE_HEX[3, 0],
+        "b":NES_PALETTE_HEX[2, 1],
+        "d":NES_PALETTE_HEX[0, 2],
+    },
+    matrix = [
+        "x5d2b4x5",
+        "x2w1x1d2b4w1b1x4",
+        "x2b1w2d1b6x4",
+        "x3b1w1d1b1d4x5",
+        "x4d2b2d4x4",       
+        "x4d2b6x4",
+        "x2w3d3b4x4",
+        "x1w1d1b3d3b3x4",
+        "w1d1b2w1b2d4x5",
+        "w1d1b4d1b3d3x3",
+        "w1d1b3d1w1d1b2w1d1b1d1x2",
+        "w1d2b1d1b2w1d1b2w1d1b1d1x1",
+        "x1w1d3b4d1b2d3x1",
+        "x1w1d4b3d6x1",
+        "x1w2d1b1d2b1d1b2d2w3",
+        "x1w2d2b1d3b3d1b2w1",
+        "w3d8b1d1b2w1",
+        "w3d2b2d1b1d6w1",
+        "w2d11b2w1",
+        "w2d2b2d1b4d2b2w1",
+        "w2d13w1",
+        "w4d2b3d1b1d2b2w1",
+        "w2x2w1d5b1d2b2w1",
+        "w1x5d1b2d5b1w1",
+        "x5d5b1d1x1d2x1",
+        "x5d1b2w1d2x5",
+        "x5d2b2d1x6",
+        "x4d2b1d3x6",
+        "x4d1b4d1x6",
+        "x4d1b1d1b2w1d1x5",
+        "x5d1b4w1d1x4",
+        "x6d6x4",
+    ]    
+)
+IronKnuckleWalkLeftShieldDown01 = IronKnuckleWalkRightShieldDown01.hflip()
+
+IronKnuckleWalkRightShieldDown02 = sprite(
+    palette = { 
+        "w":NES_PALETTE_HEX[3, 0],
+        "b":NES_PALETTE_HEX[2, 1],
+        "d":NES_PALETTE_HEX[0, 2],
+    },
+    matrix = [
+        "x5d2b4x5",
+        "x2w1x1d2b4w1b1x4",
+        "x2b1w2d1b6x4",
+        "x3b1w1d1b1d4x5",
+        "x4d2b2d4x4",       
+        "x4d2b6x4",
+        "x2w3d3b4x4",
+        "x1w1d1b3d3b3x4",
+        "w1d1b2w1b2d4x5",
+        "w1d1b4d1b3d3x3",
+        "w1d1b3d1w1d1b2w1d1b1d1x2",
+        "w1d2b1d1b2w1d1b2w1d1b1d1x1",
+        "x1w1d3b4d1b2d3x1",
+        "x1w1d4b3d6x1",
+        "x1w2d1b1d2b1d1b2d2w3",
+        "x1w2d2b1d3b3d1b2w1",
+        "w3d8b1d1b2w1",
+        "w3d2b2d1b1d6w1",
+        "w2d11b2w1",
+        "w2d2b2d1b4d2b2w1",
+        "w2d13w1",
+        "w3d2b3d2b1d2b2w1",
+        "w1x1w1d7b1d2b2w1",
+        "w1x2d3b1w1d3b1d2b1w1",
+        "x2d2b1d1b1d8x1",
+        "x2d1b3d2x1d1b2w1d1x2",
+        "x1d3b2d1x2d1b2w1d1x2",
+        "d2b2d2x3d5x2",
+        "d1b1d1b1d1x4d1b3d1x2",
+        "x1d1b2w1d1x3d1b1d1b1w1d1x1",
+        "x2d1b2d1x3d2b3w1d1",
+        "x3d2x4d7",
+    ]    
+)
+IronKnuckleWalkLeftShieldDown02 = IronKnuckleWalkRightShieldDown02.hflip()
 
 Zelda2BG01 = sprite(
     palette = { 
@@ -213,15 +386,81 @@ Zelda2BG01 = sprite(
     ]    
 )
 
+Zelda2BG02 = sprite(
+    palette = { 
+        "b":NES_PALETTE_HEX[0, 13],
+        "g":NES_PALETTE_HEX[0, 11],
+        
+        "r":NES_PALETTE_HEX[1, 7],
+        "d":NES_PALETTE_HEX[0, 7],
+        "o":NES_PALETTE_HEX[0, 8],
+    },
+    matrix = [
+        "d4o1d2o1d2o2d1o3" + "b16",
+        "d4o1d1o2d3o1d1o3" + "b16",
+        "d1r1d5o1d1o1d1o5" + "b16",
+        "d6o2d1o1d1o1d1o3" + "b16",
+        "d6o2d1o3d1o3" + "b16",
+        "d1r1d2o1d2o1d1o1d1o5" + "b16",
+        "d7o1d1o1d1o5" + "b16",
+        "d1r1d5o1d1o3d1o1d1o1" + "b16",
+        "d4o1d2o1d1o1d1o5" + "b16",
+        "d4o1d1o2d1o1d1o1d1o3" + "b16",
+        "d7o1d1o1d1o3d1o1" + "b16",
+        "d1r1d5o3d1o1d1o1d1o1" + "b16",
+        "d1r1d2o1d2o1d1o5d1o1" + "b16",
+        "d7o1d1o1d1o1d1o3" + "b16",
+        "d9o1d1o5" + "b16",
+        "d1r1d3o1d1o1d1o1d1o5" + "b16",
+        
+        "b1g4b4g4b3" + "b1g4b4g4b3",
+        "g7b1g7b1" + "g7b1g7b1",
+        "b1g3b1g3b1g3b1g3" + "b1g3b1g3b1g3b1g3",
+        "b2g1b2g2b3g1b2g2b1" + "b2g1b2g2b3g1b2g2b1",
+        "g6b1g7b1g1" + "g6b1g7b1g1",
+        "g2b2g6b2g4" + "g2b2g6b2g4",
+        "g1b2g2b3g1b2g2b3" + "g1b2g2b3g1b2g2b3",
+        "b1g2b2g1b1g1b1g2b2g1b1g1" + "b1g2b2g1b1g1b1g2b2g1b1g1",
+        "g4b1g7b1g3" + "g4b1g7b1g3",
+        "g2b1g3b1g3b1g3b1g1" + "g2b1g3b1g3b1g3b1g1",
+        "b3g2b1g1b4g2b1g1b1" + "b3g2b1g1b4g2b1g1b1",
+        "g3b3g5b3g2" + "g3b3g5b3g2",
+        "g4b1g1b1g5b1g1b1g1" + "g4b1g1b1g5b1g1b1g1",
+        "g1b1g7b1g6" + "g1b1g7b1g6",
+        "g1b3g1b1g1b1g1b3g1b1g1b1" + "g1b3g1b1g1b1g1b3g1b1g1b1",
+        "g2b1g4b1g2b1g4b1" + "g2b1g4b1g2b1g4b1",
+    ]    
+)
+
 zelda2_animation = animation_settings(
     sprite_list=[[LinkWalkLeft03, 
                   LinkWalkLeft04, 
                   LinkWalkLeft02],
+                 [IronKnuckleWalkLeftShieldUp01,
+                  IronKnuckleWalkLeftShieldUp02,
+                  IronKnuckleWalkLeftShieldUp01,
+                  IronKnuckleWalkLeftShieldUp02,
+                  IronKnuckleWalkLeftShieldUp01,
+                  IronKnuckleWalkLeftShieldUp02,
+                  IronKnuckleWalkLeftShieldUp01,
+                  IronKnuckleWalkLeftShieldUp02,
+                  IronKnuckleWalkLeftShieldDown01,
+                  IronKnuckleWalkLeftShieldDown02,
+                  IronKnuckleWalkLeftShieldDown01,
+                  IronKnuckleWalkLeftShieldDown02,
+                  IronKnuckleWalkLeftShieldDown01,
+                  IronKnuckleWalkLeftShieldDown02,
+                  IronKnuckleWalkLeftShieldDown01,
+                  IronKnuckleWalkLeftShieldDown02,
+                 ],
                   ],
-    bg_sprites=[Zelda2BG01],
+    bg_sprites=[Zelda2BG01,
+                Zelda2BG02],
     xoffs=[[0, 0, 0,],
+           [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,],
           ],
     yoffs=[[0, 1, 0],
+           [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,],
           ],
     frame_time=0.04,
     spbg_ratio=2,
