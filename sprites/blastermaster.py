@@ -118,6 +118,86 @@ SophiaLeft04 = sprite(
     ]    
 )
 
+JasonWalkLeft01 = sprite(
+    palette = { 
+        "w":NES_PALETTE_HEX[3, 0],
+        "b":NES_PALETTE_HEX[0, 13],
+        "r":NES_PALETTE_HEX[1, 5],
+    },
+    matrix = [
+        "x3b4x3",
+        "x2b1r4b1x2",
+        "x1b1r3w3b1x1",
+        "b1r3w5b1",
+        "b1r1b2w1b1w3b1",
+        "x1b3w1b1w3b1",
+        "x1b3w1b1w3b1",
+        "x1b3w4b1x1",
+        "x1b1w5b1x2",
+        "x2b5x3",
+        "x2b1r1w2r1b1x2",
+        "x1b1r5b1x2",
+        "x1b1r2w2r1b1x2",
+        "x1b1r2w2r1b1x2",
+        "x2b1r3b1x3",
+        "x2b1w1b2x4",
+        "x3b1x6",
+        
+    ]    
+)
+
+JasonWalkLeft02 = sprite(
+    palette = { 
+        "w":NES_PALETTE_HEX[3, 0],
+        "b":NES_PALETTE_HEX[0, 13],
+        "r":NES_PALETTE_HEX[1, 5],
+    },
+    matrix = [
+        "x3b4x3",
+        "x2b1r4b1x2",
+        "x1b1r3w3b1x1",
+        "b1r3w5b1",
+        "b1r1b2w1b1w3b1",
+        "x1b3w1b1w3b1",
+        "x1b3w1b1w3b1",
+        "x1b3w4b1x1",
+        "x1b1w3b3x2",
+        "x1b3w2b3x1",
+        "b1w2r5w1b1",
+        "b1w2r5w1b1",
+        "x1b2r4b2x1",
+        "x1b1w1r4b1x2",
+        "x2b4w1b1x2",
+        "x6b1x3",
+    ]    
+)
+
+JasonWalkLeft03 = sprite(
+    palette = { 
+        "w":NES_PALETTE_HEX[3, 0],
+        "b":NES_PALETTE_HEX[0, 13],
+        "r":NES_PALETTE_HEX[1, 5],
+    },
+    matrix = [
+        "x3b4x3",
+        "x2b1r4b1x2",
+        "x1b1r3w3b1x1",
+        "b1r3w5b1",
+        "b1r1b2w1b1w3b1",
+        "x1b3w1b1w3b1",
+        "x1b3w1b1w3b1",
+        "x1b3w4b1x1",
+        "x1b1w3b3x2",
+        "x1b4w2b2x1",
+        "b1w1r5w2b1",
+        "b1w1r3w1r1w2b1",
+        "x1b2r4b2x1",
+        "x1b1w1r4b1x2",
+        "x2b4w1b1x2",
+        "x6b1x3",
+    ]    
+)
+
 BlasterMasterBG01 = sprite(
     palette = { 
         "b":NES_PALETTE_HEX[0, 13],
@@ -162,13 +242,67 @@ BlasterMasterBG01 = sprite(
     ]    
 )
 
+BlasterMasterBG02 = sprite(
+    palette = { 
+        "b":NES_PALETTE_HEX[0, 13],
+        "g":NES_PALETTE_HEX[1, 0],
+        "y":NES_PALETTE_HEX[2, 8],
+        "w":NES_PALETTE_HEX[3, 0],
+        "r":NES_PALETTE_HEX[0, 8],
+    },
+    matrix = [
+        "r1b1g1b1g2b2g1b1r1b2r1g1b1" + "r1b1g1b1g2b1g1b1g1b1g1r1b1g1b1",
+        "b6r1b2r1b2g1b3" + "b2g1b1w1g5b1g1r1b3",
+        "b1r2b1g1b1r1b5g1b1g2" + "b4g2b1g1b2g2r1b3",
+        "b4g1b3g2b2r1b3" + "b1r2b1g8r1b1g2",
+        "b1g1b13r1" + "b4r8b4",
+        "b1g1b2r2b3r1g2b4" + "b1g1b2r2b3r1g2b4",
+        "b6g2b1r1b4g1b1" + "b6g2b1r1b4g1b1",
+        "r1b2r2b7r1b1g1b1" + "r1b2r2b7r1b1g1b1",
+        
+        "b2g2b1r1b4g2b1r1b2" + "b2g2b1r1b4g2b1r1b2",
+        "r2b3r1b2r2b3r1b2" + "r2b3r1b2r2b3r1b2",
+        "b16" + "b16",
+        "g1r1b1g1r1b1r1g2r1b1g1r1b1r1g1" + "g1r1b1g1r1b1r1g2r1b1g1r1b1r1g1",
+        "b1r1b1g1r1b1r1b2r1b1g1r1b1r1b1" + "b1r1b1g1r1b1r1b2r1b1g1r1b1r1b1",  
+        "b16" + "b16",
+        "w16" + "w16",
+        "r16" + "r16",
+        "b3r1b7r1b4" + "b3r1b7r1b4",
+        "r2b1g1r1b3r2b1g1r1b3" + "r2b1g1r1b3r2b1g1r1b3",
+        "b3w1r1b1g1r1b3w1r1b1g1r1" + "b3w1r1b1g1r1b3w1r1b1g1r1",
+        "r1b2w1r1b3r1b2w1r1b3" + "r1b2w1r1b3r1b2w1r1b3",
+        "g1b2w1r1b3g1b2w1r1b3" + "g1b2w1r1b3g1b2w1r1b3",
+        "r1b2w1r1b3r1b2w1r1b3" + "r1b2w1r1b3r1b2w1r1b3",
+        "b3w1r1b1r1b4w1r1b1r1b1" + "b3w1r1b1r1b4w1r1b1r1b1",
+        "b3r2b1r1b4r2b1r1b1" + "b3r2b1r1b4r2b1r1b1",
+
+        "g16" + "g16",
+        "y3b4y4b4y1" + "y3b4y4b4y1",
+        "y2b4y4b4y2" + "y2b4y4b4y2",
+        "y1b4y4b4y3" + "y1b4y4b4y3",
+        "b4y4b4y4" + "b4y4b4y4",
+        "b3y4b4y4b1" + "b3y4b4y4b1",
+        "b2y4b4y4b2" + "b2y4b4y4b2",
+        "b1y4b4y4b3" + "b1y4b4y4b3",
+    ]    
+)
+
 blastermaster_animation = animation_settings(
-    sprite_list=[[SophiaLeft04, SophiaLeft03, SophiaLeft02, SophiaLeft01]
+    sprite_list=[[SophiaLeft04, SophiaLeft03, 
+                  SophiaLeft02, SophiaLeft01],
+                 [JasonWalkLeft01, JasonWalkLeft01,
+                  JasonWalkLeft02, JasonWalkLeft02,
+                  JasonWalkLeft01, JasonWalkLeft01,
+                  JasonWalkLeft03, JasonWalkLeft03,],
                 ],
-    bg_sprites=[BlasterMasterBG01],
-    xoffs=[[0, 0, 0, 0]
+    bg_sprites=[BlasterMasterBG01,
+                BlasterMasterBG02,],
+    xoffs=[[0, 0, 0, 0],
+           [0, 0, 0, 0, 0, 0, 0, 0,],
           ],
-    yoffs=[[0, 0, 0, 0]
+    yoffs=[[0, 0, 0, 0],
+           [0, 0, 0, 0, 0, 0, 0, 0,],
           ],
     frame_time=0.03,
     spbg_ratio=2,
