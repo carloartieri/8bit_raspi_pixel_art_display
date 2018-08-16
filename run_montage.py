@@ -26,6 +26,7 @@ from sprites.castlevania3 import castlevania3_animation
 from sprites.dragonstrike import dragonstrike_animation
 from sprites.excitebike import excitebike_animation
 from sprites.kirbysadventure import kirbysadventure_animation
+from sprites.lifeforce import lifeforce_animation
 
 def parse_arguments():
 
@@ -84,6 +85,7 @@ def main():
               dragonstrike_animation,
               excitebike_animation,
               kirbysadventure_animation,
+              lifeforce_animation,
              ]
 
     #Adjust cycles for cycleall
