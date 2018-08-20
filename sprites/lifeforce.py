@@ -199,6 +199,6 @@ lifeforce_animation = animation_settings(
     spbg_ratio=3,
     center=True,
     bg_scroll_speed=(1, 0),
-    cycles_per_char=5,
+    cycles_per_char=20,
     reversible=False,
     )
