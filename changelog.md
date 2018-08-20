@@ -1,5 +1,11 @@
 ## Complete Changelog
 
+**2018.07.31**
+
+- Added new sprites and a new background to the *Dragon Warrior* animation routine.
+- Added *AD&D Dragon Strike* and *Excitebike* animation routines. 
+- Fixed minor typo bug in display sprite code.
+
 **2018.07.27**
 
 - Refactored code to allow for multiple possible backgrounds per scene and option to choose random sprite or cycle through all available sprites.

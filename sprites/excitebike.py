@@ -249,22 +249,12 @@ ExciteBikeBG01 = sprite(
 
 ExciteBikeBG02 = sprite(
     palette = { 
-        "d":NES_PALETTE_HEX[0, 8],
-        "r":NES_PALETTE_HEX[2, 8],
-        "g":NES_PALETTE_HEX[2, 9],
-        "p":NES_PALETTE_HEX[3, 13],
+        "d":NES_PALETTE_HEX[0, 10],
+        "r":NES_PALETTE_HEX[2, 9],
+        "g":NES_PALETTE_HEX[0, 2],
+        "p":NES_PALETTE_HEX[3, 9],
     },
     matrix = [
-        "g32",
-        "g32",
-        "g32",
-        "g32",
-        "p2g10p6g10p4",
-        "p3g8p8g8p5",
-        "r1p2g8r1p1r1p2r1p2g8r1p1r1p2",
-        "d1r1p1g8r2d1r2d1r1p1g8r2d1r2",
-        "d1r2g8d1r1d1r2d1r2g8d1r1d1r2",
-        "d1r1d1g8d3r2d1r1d1g8d3r2",
         "d3g8d8g8d5",
         "d3g8d8g8d5",
         "g32",
@@ -287,8 +277,63 @@ ExciteBikeBG02 = sprite(
         "r32",
         "r32",
         "r2d2r1d2r3d2r1d2r3d2r1d2r3d2r1d2r1",
+        "r32",
+        "r32",
+        "r32",
+        "r32",
+        "r32",
+        "r32",
+        "r32",
+        "r32",
+        "r32",
+        "r32",
     ]    
 )
+
+#Doesn't contrast well with rider's helmet
+
+# ExciteBikeBG02 = sprite(
+#     palette = { 
+#         "d":NES_PALETTE_HEX[0, 8],
+#         "r":NES_PALETTE_HEX[2, 8],
+#         "g":NES_PALETTE_HEX[2, 9],
+#         "p":NES_PALETTE_HEX[3, 13],
+#     },
+#     matrix = [
+#         "g32",
+#         "g32",
+#         "g32",
+#         "g32",
+#         "p2g10p6g10p4",
+#         "p3g8p8g8p5",
+#         "r1p2g8r1p1r1p2r1p2g8r1p1r1p2",
+#         "d1r1p1g8r2d1r2d1r1p1g8r2d1r2",
+#         "d1r2g8d1r1d1r2d1r2g8d1r1d1r2",
+#         "d1r1d1g8d3r2d1r1d1g8d3r2",
+#         "d3g8d8g8d5",
+#         "d3g8d8g8d5",
+#         "g32",
+#         "g32",
+#         "g32",
+#         "g32",
+#         "g32",
+#         "g32",
+#         "g32",
+#         "g32",
+#         "r32",
+#         "r32",
+#         "r32",
+#         "r32",
+#         "r32",
+#         "r32",
+#         "r32",
+#         "r32",
+#         "r32",
+#         "r32",
+#         "r32",
+#         "r2d2r1d2r3d2r1d2r3d2r1d2r3d2r1d2r1",
+#     ]    
+# )
 
 excitebike_animation = animation_settings(
     sprite_list=[[RiderRightWheelie01,

@@ -136,7 +136,7 @@ def fill_array(array, bg_array, center=True, xoff=0, yoff=0):
         return array
     
 
-def animate_sprites(dispmatrix, sprite_list, bg_sprites, frame_time, spbg_ratio=1, cycles=0, 
+def animate_sprites(dispmatrix, sprite_list, bg_sprites, frame_time, spbg_ratio=1, cycle_time=0, 
                     center=True, xoffs=0, yoffs=0, bg_scroll_speed=(0, 0), transition=False, 
                     transition_arr=None, cycles_per_char=5, cycle_all=False, xsize=32, ysize=32, 
                     clear=True):
@@ -201,9 +201,10 @@ def animate_sprites(dispmatrix, sprite_list, bg_sprites, frame_time, spbg_ratio=
     if spbg_ratio > 1:
         arr_list = list(chain.from_iterable(repeat(i, spbg_ratio) for i in arr_list))
     
-    if not cycles:
+    if not cycle_time:
         iterator = cycle(arr_list)
     else:
+        cycles = int(np.round((cycle_time)/float(len(arr_list) * frame_time), 0))
         iterator = chain.from_iterable(repeat(arr_list, cycles))
         
     for arr in iterator:

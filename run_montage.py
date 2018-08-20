@@ -26,6 +26,8 @@ from sprites.castlevania3 import castlevania3_animation
 from sprites.dragonstrike import dragonstrike_animation
 from sprites.excitebike import excitebike_animation
 from sprites.kirbysadventure import kirbysadventure_animation
+from sprites.lifeforce import lifeforce_animation
+from sprites.ducktales import ducktales_animation
 
 def parse_arguments():
 
@@ -43,12 +45,12 @@ def parse_arguments():
                                      formatter_class=CustomFormatter)
     
     opt = parser.add_argument_group("Optional arguments")
-    opt.add_argument("-c", "--cycles",
+    opt.add_argument("-c", "--cycletime",
                      action="store",
-                     dest="cycles",
-                     help=("Number of animation frames (roughly) to run per animation sequence "
-                           "(default: 500)"),
-                     default=500,
+                     dest="cycletime",
+                     help=("Number of seconds to run each animation routine "
+                           "(default: 10)"),
+                     default=10,
                      type=int,
                      metavar="INT")
     opt.add_argument("-s", "--shuffle",
@@ -84,13 +86,10 @@ def main():
               dragonstrike_animation,
               excitebike_animation,
               kirbysadventure_animation,
+              lifeforce_animation,
+              ducktales_animation,
              ]
 
-    #Adjust cycles for cycleall
-    cycles = max(1, int(args.cycles/(len(scenes[0].sprite_list) * scenes[0].spbg_ratio)))
-    if args.cycleall:
-        cycles = int(cycles/np.mean([x.cycles_per_char for x in scenes]))
- 
     if shuffle:
         np.random.shuffle(scenes)
 
@@ -101,16 +100,15 @@ def main():
     
     #Seed the display with black for the first transition
     arr = display_sprite(dispmatrix=dispmatrix, 
-                           sprite=scenes[0].bg_sprites[0], 
-                           bg_sprite=None, 
-                           center=True,
-                           xoff=0,
-                           yoff=0,
-                           display=False)
+                         sprite=scenes[0].bg_sprites[0], 
+                         bg_sprite=None, 
+                         center=True,
+                         xoff=0,
+                         yoff=0,
+                         display=False)
     arr1 = np.full((arr.shape[0], arr.shape[1], 3), convert_hex_to_rgb_tuple("000000"), dtype=np.uint8)
 
-    while True:
-        
+    while True:       
         arr1 = animate_sprites(dispmatrix=dispmatrix, 
                                sprite_list=scenes[0].sprite_list, 
                                bg_sprites=scenes[0].bg_sprites,
@@ -120,16 +118,14 @@ def main():
                                spbg_ratio=scenes[0].spbg_ratio,
                                center=scenes[0].center,
                                bg_scroll_speed=scenes[0].bg_scroll_speed,
-                               cycles=cycles,
+                               cycle_time=args.cycletime,
                                clear=False,
                                transition=True,
                                transition_arr=arr1,
                                cycles_per_char=scenes[0].cycles_per_char,
                                cycle_all=args.cycleall
                               )
-
         scenes.rotate(-1)
-
 
 if __name__ == "__main__":
     try:
