@@ -27,6 +27,7 @@ from sprites.dragonstrike import dragonstrike_animation
 from sprites.excitebike import excitebike_animation
 from sprites.kirbysadventure import kirbysadventure_animation
 from sprites.lifeforce import lifeforce_animation
+from sprites.ducktales import ducktales_animation
 
 def parse_arguments():
 
@@ -86,6 +87,7 @@ def main():
               excitebike_animation,
               kirbysadventure_animation,
               lifeforce_animation,
+              ducktales_animation,
              ]
 
     #Adjust cycles for cycleall
@@ -103,16 +105,15 @@ def main():
     
     #Seed the display with black for the first transition
     arr = display_sprite(dispmatrix=dispmatrix, 
-                           sprite=scenes[0].bg_sprites[0], 
-                           bg_sprite=None, 
-                           center=True,
-                           xoff=0,
-                           yoff=0,
-                           display=False)
+                         sprite=scenes[0].bg_sprites[0], 
+                         bg_sprite=None, 
+                         center=True,
+                         xoff=0,
+                         yoff=0,
+                         display=False)
     arr1 = np.full((arr.shape[0], arr.shape[1], 3), convert_hex_to_rgb_tuple("000000"), dtype=np.uint8)
 
-    while True:
-        
+    while True:       
         arr1 = animate_sprites(dispmatrix=dispmatrix, 
                                sprite_list=scenes[0].sprite_list, 
                                bg_sprites=scenes[0].bg_sprites,
@@ -129,9 +130,7 @@ def main():
                                cycles_per_char=scenes[0].cycles_per_char,
                                cycle_all=args.cycleall
                               )
-
         scenes.rotate(-1)
-
 
 if __name__ == "__main__":
     try:
