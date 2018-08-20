@@ -155,7 +155,10 @@ Then run the animation routine as above.
 **2018.08.19**
 
 - Added *LifeForce* animation routine with Vic Viper and Lord British ships and two backgrounds from area 1.
-- Added *Ducktales* animation routine 
+- Added *Ducktales* animation routine with Scrooge McDuck and the 'Native' enemy in Amazon and Moon backgrounds.
+- Switched out *Excitebike* background 2 for a higher-contrast track (3).
+- Converted the 'cycles' option in `run_montage.py` to `--cycletime`, which specifies the number of seconds of real time that each montage should run for.
+- Added table of games, sprites, and backgrounds currently in the montage for reference.
 
 **2018.08.12**
 
@@ -168,11 +171,5 @@ Then run the animation routine as above.
 - Added *Kirby's Adventure* animation routine.
 - Added new sprites and backgrounds to *Super Mario Bros. 3* animation routine.
 - Added new background to *Final Fantasy* animation routine.
-
-**2018.07.31**
-
-- Added new sprites and a new background to the *Dragon Warrior* animation routine.
-- Added *AD&D Dragon Strike* and *Excitebike* animation routines. 
-- Fixed minor typo bug in display sprite code.
 
 See [complete Changelog here](changelog.md).
