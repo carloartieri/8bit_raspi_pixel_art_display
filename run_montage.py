@@ -45,12 +45,12 @@ def parse_arguments():
                                      formatter_class=CustomFormatter)
     
     opt = parser.add_argument_group("Optional arguments")
-    opt.add_argument("-c", "--cycles",
+    opt.add_argument("-c", "--cycletime",
                      action="store",
-                     dest="cycles",
-                     help=("Number of animation frames (roughly) to run per animation sequence "
-                           "(default: 500)"),
-                     default=500,
+                     dest="cycletime",
+                     help=("Number of seconds to run each animation routine "
+                           "(default: 10)"),
+                     default=10,
                      type=int,
                      metavar="INT")
     opt.add_argument("-s", "--shuffle",
@@ -90,11 +90,6 @@ def main():
               ducktales_animation,
              ]
 
-    #Adjust cycles for cycleall
-    cycles = max(1, int(args.cycles/(len(scenes[0].sprite_list) * scenes[0].spbg_ratio)))
-    if args.cycleall:
-        cycles = int(cycles/np.mean([x.cycles_per_char for x in scenes]))
- 
     if shuffle:
         np.random.shuffle(scenes)
 
@@ -123,7 +118,7 @@ def main():
                                spbg_ratio=scenes[0].spbg_ratio,
                                center=scenes[0].center,
                                bg_scroll_speed=scenes[0].bg_scroll_speed,
-                               cycles=cycles,
+                               cycle_time=cycletime,
                                clear=False,
                                transition=True,
                                transition_arr=arr1,

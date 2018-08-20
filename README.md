@@ -10,6 +10,24 @@ This is a labor of love that I'm putting together on my spare time. I'm a data s
 
 Note that all of the art included herein is intended as an homage to old-school gaming, and is freely shared with the community under the [Creative Commons Attribution 4.0 International (CC BY 4.0) License](https://creativecommons.org/licenses/by/4.0/) (basically do whatever you want with it as long as you let people know where you got it). All characters, art, and other trademarks are the properties of their respective owners.
 
+## Games currently featured in the montage
+
+| Game | Developer | Release (NA) | Sprites | Backgrounds |
+| --- | --- | :---: | --- | --- |
+| *Excitebike* | Nintendo | 1985 | Bike (Wheelie) | Track 1, Track 3 |
+| *LifeForce* | Konami | 1987 | Vic Viper, Lord British | Area 1, Area 1 (alt) |
+| *Blaster Master* | Sunsoft | 1988  | Sophia, Jake (overworld) | Area 1, Area 3 |
+| *Zelda 2: The Adventure of Link* | Nintendo | 1988 | Link, Blue IronKnuckle | Island Palace, Woods |
+| *Dragon Warrior* | Enix | 1989 | Hero & Princess, King, Dragon Lord | Alefgard, Plains |
+| *Ducktales* | Capcom | 1989 | Scrooge McDuck, Native | Amazon, Moon |
+| *Mega Man 2* | Capcom | 1989 | Mega Man, Crash Man, Metal Man | Wood Man, Flash Man |
+| *Ninja Gaiden* | Tecmo | 1989 | Ryu | Area 1, Area 4 |
+| *Final Fantasy* | Square | 1990 | Fighter, Monk, White Mage, Black Mage | Corneria, Flying Fortress |
+| *Castlevania 3: Dracula's Curse* | Konami | 1990 | Trevor, Grant, Sylpha | Wallachia Village, Murky Marsh |
+| *Super Mario Bros. 3* | Nintendo | 1990 | Tanooki Mario, Frog Mario| Plains, Ice Plains, Palace | 
+| *AD&D DragonStrike* | Westwood | 1992 | Red Dragon | Forest | 
+| *Kirby's Adventure* | HAL Laboratory | 1993 | Kirby, Kirby (puffball) | Whispy Woods |
+
 
 ## Required hardware components
 
@@ -133,6 +151,11 @@ Then run the animation routine as above.
 - Finally, thanks to all of the NES developers and publishers featured herein for the memories!
 
 ## Changelog (last 3)
+
+**2018.08.19**
+
+- Added *LifeForce* animation routine with Vic Viper and Lord British ships and two backgrounds from area 1.
+- Added *Ducktales* animation routine 
 
 **2018.08.12**
 
