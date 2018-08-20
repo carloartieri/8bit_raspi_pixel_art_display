@@ -118,7 +118,7 @@ def main():
                                spbg_ratio=scenes[0].spbg_ratio,
                                center=scenes[0].center,
                                bg_scroll_speed=scenes[0].bg_scroll_speed,
-                               cycle_time=cycletime,
+                               cycle_time=args.cycletime,
                                clear=False,
                                transition=True,
                                transition_arr=arr1,
