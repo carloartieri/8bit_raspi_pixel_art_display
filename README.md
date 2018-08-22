@@ -111,7 +111,7 @@ Next, we need to install the OS onto the microSD card and download all of the dr
 		sudo python3 8bit_raspi_pixel_art_display/run_montage.py
 
 
-	By appending `-h` to the end of the above command, you can get a summary of the command line options available. In particular, if you'd like the individual animations to run longer, add `--cycles 1000` (or `2000`). Also, adding `--shuffle` shuffles the order of animation routines at startup. 
+	By appending `-h` to the end of the above command, you can get a summary of the command line options available. In particular, if you'd like the individual animations to run longer, add `--cycletime 30` (where `30` here is the runtime of each scene in seconds). Also, adding `--shuffle` shuffles the order of animation routines at startup. 
 	
 	If you'd like the montage to run in the background, such that you could ssh into the Raspberry Pi, turn it on and then log out, use the following command (adding desired options before the `&`):
 
@@ -119,11 +119,11 @@ Next, we need to install the OS onto the microSD card and download all of the dr
 
 	However, both of the options above will have to be rerun if the Pi is turned off. Alternatively, if you'd like the Pi to launch the animation code immediately upon boot-up, you'll have to edit the `/etc/rc.local` file (using a command such as `sudo vim /etc/rc.local`) to add the following command before the `exit 0` line:
 	
-		sudo /usr/bin/python3 /home/pi/8bit_raspi_pixel_art_display/run_montage.py --cycles 1000 --shuffle &
+		sudo /usr/bin/python3 /home/pi/8bit_raspi_pixel_art_display/run_montage.py --cycletime 30 --shuffle &
 	
 	Note that mistyping the above command can prevent the Raspberry Pi from booting, so type it in carefully! In this case, you can simply unplug the Pi to stop the display and plug it back in to restart.
 	
-## Updating
+## Updating the code
 
 When I get around to adding new animation routines, I'll update the Changelog below. In order to get these changes without having to redo a fresh install, you'll simply need to 'pull' the updates from github and relaunch the animation script. Upon logging into the Pi, run the following commands:
 
@@ -134,6 +134,47 @@ cd ..
 ```	
 
 Then run the animation routine as above.
+
+## Developing new sprites, scenes, etc.
+All code in the repo was written in Python 3.5.3.
+
+For those who are interested in digging into how the sprites are coded, I've placed a [Jupyter notebook](http://jupyter.org/) in the repo with descriptions and examples that you can play around with. The notebook is called `example_sprite_animation_code.ipynb`.
+
+### Launching Jupyter
+
+If you followed the steps above to install the code for the pixel art display, then Jupyter is already installed on the Raspberry Pi. Follow these steps in order to run the notebook:
+
+1. You'll want to copy the `development_examples.ipynb` notebook and work on the copy (the original is version controlled by git and modifying it will prevent pulling down new updates from this repo unless you know what you're doing!). From within the `8bit_raspi_pixel_art_display/` directory type:
+
+		sudo cp development_examples.ipynb carlo_test.ipynb
+
+	renaming `carlo_test.ipynb` with whatever you'd like.
+
+2. You'll need the IP address of the Raspberry Pi on your network. If you're already ssh-ing into the Pi, then you should know this, but if not, you can type `hostname -I` on the command line and the first `XXX.XXX.XXX.XXX` number is your IP. 
+
+3. Launch Jupyter from either the home directory (`cd ~`) or the `8bit_raspi_pixel_art_display/` directory as follows:
+
+		sudo jupyter notebook --ip 0.0.0.0 --port 5000 --no-browser --allow-root 
+	
+	You'll get a message that looks like the following:
+	
+		Copy/paste this URL into your browser when you connect for the first time,
+	   	to login with a token:
+       	 	http://(raspberrypi or 127.0.0.1):5000/?token=3bd414122cc01b920e6dcae18eea22729d5790dd0b60820d
+
+	You'll need to copy the `http://` line into a web browser on a PC, replacing the section in parentheses with the IP address from your Raspberry Pi. So if your IP was `10.3.0.2` then, based on the example above, you would copy the following into your web browser:
+	
+		http://10.3.0.2:5000/?token=3bd414122cc01b920e6dcae18eea22729d5790dd0b60820d
+		
+	You should get a screen that looks like this:
+	
+	![Jupyter screenshot](images/jupyter_example.png)
+	
+	Click on the copied notebook (in this case `carlo_test.ipynb`) and follow the instructions within.
+	
+**P.S.** As described above, while changes made to the notebook will be saved if the Raspberry Pi is shutdown or if you log out of a ssh session, Jupyter will close and you'll have to repeat 3 to relaunch it. Alternatively, if you're accessing the Raspberry Pi via ssh, you can launch Juptyer wrapped in a `nohup` command or within a `tmux` or `screen` session and Jupyter will remain running persistently and you'll be able to log in anytime by bookmarking the address.
+
+
 
 ## Credits, links, and resources
 
