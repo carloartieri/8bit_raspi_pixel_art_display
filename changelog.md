@@ -1,5 +1,11 @@
 ## Complete Changelog
 
+**2018.08.07**
+
+- Added *Kirby's Adventure* animation routine.
+- Added new sprites and backgrounds to *Super Mario Bros. 3* animation routine.
+- Added new background to *Final Fantasy* animation routine.
+
 **2018.07.31**
 
 - Added new sprites and a new background to the *Dragon Warrior* animation routine.

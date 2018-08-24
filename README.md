@@ -193,6 +193,11 @@ If you followed the steps above to install the code for the pixel art display, t
 
 ## Changelog (last 3)
 
+**2018.08.23**
+
+- Added a description of how to launch Jupyter to the README file.
+- Added an Jupyter notebook `development_examples.ipynb` containing descriptions and examples of how to create and draw sprites. Animation descriptions to follow.
+
 **2018.08.19**
 
 - Added *LifeForce* animation routine with Vic Viper and Lord British ships and two backgrounds from area 1.
@@ -206,11 +211,5 @@ If you followed the steps above to install the code for the pixel art display, t
 - Added Metal Man and Crash Man sprites as well as Flash Man stage background to *Mega Man 2* animation routine.
 - Added Blue Iron Knuckle sprite and Forest background to *Zelda 2* animation routine.
 - Added Jason out of Sophia and Area 3 background to *Blaster Master* animation routine.
-
-**2018.08.07**
-
-- Added *Kirby's Adventure* animation routine.
-- Added new sprites and backgrounds to *Super Mario Bros. 3* animation routine.
-- Added new background to *Final Fantasy* animation routine.
 
 See [complete Changelog here](changelog.md).
