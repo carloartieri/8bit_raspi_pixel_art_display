@@ -1,5 +1,11 @@
 ## Complete Changelog
 
+**2018.08.12**
+
+- Added Metal Man and Crash Man sprites as well as Flash Man stage background to *Mega Man 2* animation routine.
+- Added Blue Iron Knuckle sprite and Forest background to *Zelda 2* animation routine.
+- Added Jason out of Sophia and Area 3 background to *Blaster Master* animation routine.
+
 **2018.08.07**
 
 - Added *Kirby's Adventure* animation routine.
