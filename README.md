@@ -10,6 +10,16 @@ This is a labor of love that I'm putting together on my spare time. I'm a data s
 
 Note that all of the art included herein is intended as an homage to old-school gaming, and is freely shared with the community under the [Creative Commons Attribution 4.0 International (CC BY 4.0) License](https://creativecommons.org/licenses/by/4.0/) (basically do whatever you want with it as long as you let people know where you got it). All characters, art, and other trademarks are the properties of their respective owners.
 
+## Table of Contents
+1. [Games currently featured in the montage](https://github.com/carloartieri/8bit_raspi_pixel_art_display#games-currently-featured-in-the-montage)
+2. [Required hardware components](https://github.com/carloartieri/8bit_raspi_pixel_art_display#required-hardware-components)
+3. [Putting the hardware together](https://github.com/carloartieri/8bit_raspi_pixel_art_display#putting-the-hardware-together)
+4. [Setting up the software](https://github.com/carloartieri/8bit_raspi_pixel_art_display#setting-up-the-software)
+5. [Updating the code](https://github.com/carloartieri/8bit_raspi_pixel_art_display#updating-the-code)
+6. [Developing new sprites, scenes, etc.](https://github.com/carloartieri/8bit_raspi_pixel_art_display#developing-new-sprites-scenes-etc)
+7. [Credits, links, and resources](https://github.com/carloartieri/8bit_raspi_pixel_art_display#credits-links-and-resources)
+8. [Changelog](https://github.com/carloartieri/8bit_raspi_pixel_art_display#changelog-last-3)
+
 ## Games currently featured in the montage
 
 | Game | Developer | Release (NA) | Sprites | Backgrounds |
@@ -193,6 +203,11 @@ If you followed the steps above to install the code for the pixel art display, t
 
 ## Changelog (last 3)
 
+**2018.08.28**
+
+- Updated Jupyter notebook `development_examples.ipynb` with animation instructions in addition to instructions on how to add new animations to the montage.
+- Added a Table of Contents to the README.md.
+
 **2018.08.23**
 
 - Added a description of how to launch Jupyter to the README file.
@@ -205,11 +220,5 @@ If you followed the steps above to install the code for the pixel art display, t
 - Switched out *Excitebike* background 2 for a higher-contrast track (3).
 - Converted the 'cycles' option in `run_montage.py` to `--cycletime`, which specifies the number of seconds of real time that each montage should run for.
 - Added table of games, sprites, and backgrounds currently in the montage for reference.
-
-**2018.08.12**
-
-- Added Metal Man and Crash Man sprites as well as Flash Man stage background to *Mega Man 2* animation routine.
-- Added Blue Iron Knuckle sprite and Forest background to *Zelda 2* animation routine.
-- Added Jason out of Sophia and Area 3 background to *Blaster Master* animation routine.
 
 See [complete Changelog here](changelog.md).
