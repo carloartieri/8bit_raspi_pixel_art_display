@@ -3,6 +3,68 @@ sys.path.append("../")
 from settings import (NES_PALETTE_HEX, animation_settings)
 from core import sprite
 
+RiderRightStandard01 = sprite(
+    palette = {
+        "b":NES_PALETTE_HEX[0, 13],
+        "w":NES_PALETTE_HEX[3, 0],
+        "r":NES_PALETTE_HEX[0, 6],
+    },
+    matrix = [
+        "x8w4x8",
+        "x7w5r1x7",
+        "x7w4r3x6",
+        "x7r3b3x7",
+        "x7w4b1w1x7",
+        "x7b1r2w4x6",
+        "x6w2r3x9",
+        "x5w2b1r2w1x9",
+        "x5w1b1w1r5x1b1x5",
+        "x5w1b1w2r3b1r1b1x5",
+        "x5w1b2w1x3w2b1x5",
+        "x2r3w2b2w1x1r2w1r4x2",
+        "x5b2w1b1w2r2w2x3r1x1",
+        "x2b2r3b1w1b1w1r3w2b2x2",
+        "x1b2x1r3b1w3r2x1w2x1b2x1",
+        "b2x2r2x1w1r3b1x1b2w1x2b2",
+        "b1x2b1x2w2r3b1x1b1x1w2x2b1",
+        "b1x2w4x1r3x2b1x2w1x2b1",
+        "b2x3b2x1r4x1b2x3b2",
+        "x1b2x1b2x4b1x3b2x1b2x1",
+        "x2b3x10b3x2",
+    ]
+)
+
+RiderRightStandard02 = sprite(
+    palette = {
+        "b":NES_PALETTE_HEX[0, 13],
+        "w":NES_PALETTE_HEX[3, 0],
+        "r":NES_PALETTE_HEX[0, 6],
+    },
+    matrix = [
+        "x7w4x8",
+        "x6w5r1x7",
+        "x6w4r3x6",
+        "x6r3b3x7",
+        "x6w4b1w1x7",
+        "x6b1r2w4x6",
+        "x5w2r3x9",
+        "x4w2b1r2w1x9",
+        "x4w1b1w1r2w1x9",
+        "x4w1b1w1r3x9",
+        "x4w1b2w1r4x1b1x5",
+        "x5w1b2w1r2b1r1b1x5",
+        "x6w1b1w2x1w2b1x5",
+        "x1r3b3w1b1w1r2w1r4x2",
+        "x2b5w3r2w3b1x1r1x1",
+        "x1b1x1r3b1r3b1r2w2x1b1x2",
+        "b1x2r3w1r3b1r1x1b1w2x1b1x1",
+        "b1x1w1r2w2r3b1x1b1x1w2x2b1",
+        "b1x5b1r4x1b1x5b1",
+        "b2x2b2x3b1x2b2x3b2",
+        "x1b4x8b4x2",
+    ]
+)
+
 RiderRightWheelie01 = sprite(
     palette = {
         "b":NES_PALETTE_HEX[0, 13],
