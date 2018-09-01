@@ -25,6 +25,7 @@ Note that all of the art included herein is intended as an homage to old-school 
 | Game | Developer | Release (NA) | Sprites | Backgrounds |
 | --- | --- | :---: | --- | --- |
 | *Excitebike* | Nintendo | 1985 | Bike (Wheelie) | Track 1, Track 3 |
+| *Ghosts 'n Goblins* | Capcom | 1985 | Arthur (Armored), Red Arremer | Cave, City |
 | *LifeForce* | Konami | 1987 | Vic Viper, Lord British | Area 1, Area 1 (alt) |
 | *Blaster Master* | Sunsoft | 1988  | Sophia, Jake (overworld) | Area 1, Area 3 |
 | *Zelda 2: The Adventure of Link* | Nintendo | 1988 | Link, Blue IronKnuckle | Island Palace, Woods |
