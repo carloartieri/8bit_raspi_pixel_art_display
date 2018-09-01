@@ -24,7 +24,7 @@ Note that all of the art included herein is intended as an homage to old-school 
 
 | Game | Developer | Release (NA) | Sprites | Backgrounds |
 | --- | --- | :---: | --- | --- |
-| *Excitebike* | Nintendo | 1985 | Bike (Wheelie) | Track 1, Track 3 |
+| *Excitebike* | Nintendo | 1985 | Bike (Standard), Bike (Wheelie) | Track 1, Track 3 |
 | *Ghosts 'n Goblins* | Capcom | 1985 | Arthur (Armored), Red Arremer | Cave, City |
 | *LifeForce* | Konami | 1987 | Vic Viper, Lord British | Area 1, Area 1 (alt) |
 | *Blaster Master* | Sunsoft | 1988  | Sophia, Jake (overworld) | Area 1, Area 3 |
@@ -204,6 +204,11 @@ If you followed the steps above to install the code for the pixel art display, t
 
 ## Changelog (last 3)
 
+**2018.09.01**
+
+- Added *Ghosts n' Goblins* animation routine with Armored Arthur and the Red Arremer sprites and two stage backgrounds.
+- Added standard bike sprite to the *Excitebike* animation routine and adjusted sprite animation speed.
+
 **2018.08.28**
 
 - Updated Jupyter notebook `development_examples.ipynb` with animation instructions in addition to instructions on how to add new animations to the montage.
@@ -213,13 +218,5 @@ If you followed the steps above to install the code for the pixel art display, t
 
 - Added a description of how to launch Jupyter to the README file.
 - Added an Jupyter notebook `development_examples.ipynb` containing descriptions and examples of how to create and draw sprites. Animation descriptions to follow.
-
-**2018.08.19**
-
-- Added *LifeForce* animation routine with Vic Viper and Lord British ships and two backgrounds from area 1.
-- Added *Ducktales* animation routine with Scrooge McDuck and the 'Native' enemy in Amazon and Moon backgrounds.
-- Switched out *Excitebike* background 2 for a higher-contrast track (3).
-- Converted the 'cycles' option in `run_montage.py` to `--cycletime`, which specifies the number of seconds of real time that each montage should run for.
-- Added table of games, sprites, and backgrounds currently in the montage for reference.
 
 See [complete Changelog here](changelog.md).

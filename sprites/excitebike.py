@@ -4,7 +4,7 @@ from settings import (NES_PALETTE_HEX, animation_settings)
 from core import sprite
 
 RiderRightWheelie01 = sprite(
-    palette = { 
+    palette = {
         "b":NES_PALETTE_HEX[0, 13],
         "w":NES_PALETTE_HEX[3, 0],
         "r":NES_PALETTE_HEX[0, 6],
@@ -32,11 +32,11 @@ RiderRightWheelie01 = sprite(
         "b2x3b2x13",
         "x1b2x1b2x14",
         "x2b3x15",
-    ]    
+    ]
 )
 
 RiderRightWheelie02 = sprite(
-    palette = { 
+    palette = {
         "b":NES_PALETTE_HEX[0, 13],
         "w":NES_PALETTE_HEX[3, 0],
         "r":NES_PALETTE_HEX[0, 6],
@@ -65,11 +65,11 @@ RiderRightWheelie02 = sprite(
         "b2x3b2x12",
         "x1b2x1b2x13",
         "x2b3x14",
-    ]    
+    ]
 )
 
 RiderRightWheelie03 = sprite(
-    palette = { 
+    palette = {
         "b":NES_PALETTE_HEX[0, 13],
         "w":NES_PALETTE_HEX[3, 0],
         "r":NES_PALETTE_HEX[0, 6],
@@ -99,11 +99,11 @@ RiderRightWheelie03 = sprite(
         "x1b2x3b2x10",
         "x2b2x1b2x11",
         "x3b3x12",
-    ]    
+    ]
 )
 
 RiderRightWheelie04 = sprite(
-    palette = { 
+    palette = {
         "b":NES_PALETTE_HEX[0, 13],
         "w":NES_PALETTE_HEX[3, 0],
         "r":NES_PALETTE_HEX[0, 6],
@@ -133,11 +133,11 @@ RiderRightWheelie04 = sprite(
         "x4b2x3b2x8",
         "x5b2x1b2x9",
         "x6b3x10",
-    ]    
+    ]
 )
 
 RiderRightWheelie05 = sprite(
-    palette = { 
+    palette = {
         "b":NES_PALETTE_HEX[0, 13],
         "w":NES_PALETTE_HEX[3, 0],
         "r":NES_PALETTE_HEX[0, 6],
@@ -167,11 +167,11 @@ RiderRightWheelie05 = sprite(
         "x6b2x3b2x7",
         "x7b2x1b2x8",
         "x8b3x9",
-    ]    
+    ]
 )
 
 RiderRightWheelie06 = sprite(
-    palette = { 
+    palette = {
         "b":NES_PALETTE_HEX[0, 13],
         "w":NES_PALETTE_HEX[3, 0],
         "r":NES_PALETTE_HEX[0, 6],
@@ -201,11 +201,11 @@ RiderRightWheelie06 = sprite(
         "x9r1x1b2x3b2",
         "x12b2x1b2x1",
         "x13b3x2",
-    ]    
+    ]
 )
 
 ExciteBikeBG01 = sprite(
-    palette = { 
+    palette = {
         "d":NES_PALETTE_HEX[0, 8],
         "r":NES_PALETTE_HEX[2, 8],
         "g":NES_PALETTE_HEX[2, 9],
@@ -244,11 +244,11 @@ ExciteBikeBG01 = sprite(
         "r32",
         "r32",
         "r32",
-    ]    
+    ]
 )
 
 ExciteBikeBG02 = sprite(
-    palette = { 
+    palette = {
         "d":NES_PALETTE_HEX[0, 10],
         "r":NES_PALETTE_HEX[2, 9],
         "g":NES_PALETTE_HEX[0, 2],
@@ -287,13 +287,13 @@ ExciteBikeBG02 = sprite(
         "r32",
         "r32",
         "r32",
-    ]    
+    ]
 )
 
 #Doesn't contrast well with rider's helmet
 
 # ExciteBikeBG02 = sprite(
-#     palette = { 
+#     palette = {
 #         "d":NES_PALETTE_HEX[0, 8],
 #         "r":NES_PALETTE_HEX[2, 8],
 #         "g":NES_PALETTE_HEX[2, 9],
@@ -332,30 +332,47 @@ ExciteBikeBG02 = sprite(
 #         "r32",
 #         "r32",
 #         "r2d2r1d2r3d2r1d2r3d2r1d2r3d2r1d2r1",
-#     ]    
+#     ]
 # )
 
 excitebike_animation = animation_settings(
-    sprite_list=[[RiderRightWheelie01,
+    sprite_list=[
+                 [RiderRightStandard01,
+                  RiderRightStandard02],
+                 [RiderRightWheelie01,
+                  RiderRightWheelie01,
+                  RiderRightWheelie02,
                   RiderRightWheelie02,
                   RiderRightWheelie03,
+                  RiderRightWheelie03,
                   RiderRightWheelie04,
+                  RiderRightWheelie04,
+                  RiderRightWheelie05,
                   RiderRightWheelie05,
                   RiderRightWheelie06,
+                  RiderRightWheelie06,
+                  RiderRightWheelie05,
                   RiderRightWheelie05,
                   RiderRightWheelie04,
+                  RiderRightWheelie04,
                   RiderRightWheelie03,
-                  RiderRightWheelie02
+                  RiderRightWheelie03,
+                  RiderRightWheelie02,
+                  RiderRightWheelie02,
                  ],
                 ],
     bg_sprites=[ExciteBikeBG01,
                 ExciteBikeBG02],
-    xoffs=[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    xoffs=[
+           [0, 0],
+           [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
           ],
-    yoffs=[[1, 1, 0, 0, 0, 0, 0, 0, 0, 1],
+    yoffs=[
+           [0, 0],
+           [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1,],
           ],
-    frame_time=0.035,
-    spbg_ratio=4,
+    frame_time=0.03,
+    spbg_ratio=2,
     center=True,
     bg_scroll_speed=(1, 0),
     cycles_per_char=5,

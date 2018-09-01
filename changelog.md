@@ -1,5 +1,13 @@
 ## Complete Changelog
 
+**2018.08.19**
+
+- Added *LifeForce* animation routine with Vic Viper and Lord British ships and two backgrounds from area 1.
+- Added *Ducktales* animation routine with Scrooge McDuck and the 'Native' enemy in Amazon and Moon backgrounds.
+- Switched out *Excitebike* background 2 for a higher-contrast track (3).
+- Converted the 'cycles' option in `run_montage.py` to `--cycletime`, which specifies the number of seconds of real time that each montage should run for.
+- Added table of games, sprites, and backgrounds currently in the montage for reference.
+
 **2018.08.12**
 
 - Added Metal Man and Crash Man sprites as well as Flash Man stage background to *Mega Man 2* animation routine.
