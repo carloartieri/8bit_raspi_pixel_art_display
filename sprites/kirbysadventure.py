@@ -4,7 +4,7 @@ from settings import (NES_PALETTE_HEX, animation_settings)
 from core import sprite
 
 KirbyWalkRight01 = sprite(
-    palette = { 
+    palette = {
         "b":NES_PALETTE_HEX[0, 13],
         "p":NES_PALETTE_HEX[3, 13],
         "d":NES_PALETTE_HEX[2, 4],
@@ -26,11 +26,11 @@ KirbyWalkRight01 = sprite(
         "x1b1d3b5d3b2x1",
         "x2b1d2b1x4b3x3",
         "x3b2x11",
-    ]    
+    ]
 )
 
 KirbyWalkRight02 = sprite(
-    palette = { 
+    palette = {
         "b":NES_PALETTE_HEX[0, 13],
         "p":NES_PALETTE_HEX[3, 13],
         "d":NES_PALETTE_HEX[2, 4],
@@ -51,11 +51,11 @@ KirbyWalkRight02 = sprite(
         "x3b1d1b7x3",
         "x4b1d4b1d1b1x3",
         "x5b6x4",
-    ]    
+    ]
 )
 
 KirbyWalkRight03 = sprite(
-    palette = { 
+    palette = {
         "b":NES_PALETTE_HEX[0, 13],
         "p":NES_PALETTE_HEX[3, 13],
         "d":NES_PALETTE_HEX[2, 4],
@@ -77,11 +77,11 @@ KirbyWalkRight03 = sprite(
         "x1b1d2b7d4b1",
         "x2b2x5b1d5b1",
         "x10b5x1",
-    ]    
+    ]
 )
 
 KirbyPuffedWalkRight01 = sprite(
-    palette = { 
+    palette = {
         "b":NES_PALETTE_HEX[0, 13],
         "p":NES_PALETTE_HEX[3, 13],
         "d":NES_PALETTE_HEX[2, 4],
@@ -110,11 +110,11 @@ KirbyPuffedWalkRight01 = sprite(
         "x1b1d4b2d6b2d3b2x2",
         "x2b1d2b1x2b6x2b3x4",
         "x3b2x18",
-    ]    
+    ]
 )
 
 KirbyPuffedWalkRight02 = sprite(
-    palette = { 
+    palette = {
         "b":NES_PALETTE_HEX[0, 13],
         "p":NES_PALETTE_HEX[3, 13],
         "d":NES_PALETTE_HEX[2, 4],
@@ -143,11 +143,11 @@ KirbyPuffedWalkRight02 = sprite(
         "x6b1d8b1x6",
         "x7b1d6b1x7",
         "x8b6x8",
-    ]    
+    ]
 )
 
 KirbyPuffedWalkRight03 = sprite(
-    palette = { 
+    palette = {
         "b":NES_PALETTE_HEX[0, 13],
         "p":NES_PALETTE_HEX[3, 13],
         "d":NES_PALETTE_HEX[2, 4],
@@ -175,11 +175,11 @@ KirbyPuffedWalkRight03 = sprite(
         "x1b1d3b2d3p4d3b2d3b1",
         "x2b2d3b2d6b2d5b1",
         "x4b3x2b6x1b6x1",
-    ]    
+    ]
 )
 
 KirbysAdventureBG01 = sprite(
-    palette = { 
+    palette = {
         "b":NES_PALETTE_HEX[0, 13],
         "y":NES_PALETTE_HEX[2, 8],
         "l":NES_PALETTE_HEX[3, 7],
@@ -214,7 +214,7 @@ KirbysAdventureBG01 = sprite(
         "g2b1d2b2k4b1g3b1" + "g2b1d2b2k4b1g3b1",
         "b2d2b1g1b1k3b1g4b1" + "b2d2b1g1b1k3b1g4b1",
         "k1b1d1b1g2b2k2b3g1b1k1" + "k1b1d1b1g2b2k2b3g1b1k1",
-        "b1d1b1g3b5k1b3k1" + "b1d1b1g3b5k1b3k1",        
+        "b1d1b1g3b5k1b3k1" + "b1d1b1g3b5k1b3k1",
         "b16" + "b16",
         "l16" + "l16",
         "y16" + "y16",
@@ -222,7 +222,54 @@ KirbysAdventureBG01 = sprite(
         "r16" + "r16",
         "r3y5r3y5" + "r3y5r3y5",
         "y2r3y5r3y3" + "y2r3y5r3y3",
-    ]    
+    ]
+)
+
+KirbysAdventureBG02 = sprite(
+    palette = {
+        "b":NES_PALETTE_HEX[0, 13],
+        "g":NES_PALETTE_HEX[0, 9],
+        "l":NES_PALETTE_HEX[2, 11],
+        "e":NES_PALETTE_HEX[3, 7],
+
+        "r":NES_PALETTE_HEX[0, 7],
+        "d":NES_PALETTE_HEX[2, 7],
+    },
+    matrix = [
+        "b1r3b4r2b1r5" + "b1r3b4r2b1r5",
+        "r2b4r2b2r2b1r3" + "r2b4r2b2r2b1r3",
+        "b5r1b2r8" + "b5r1b2r8",
+        "b2r3b1r9b1" + "b2r3b1r9b1",
+        "b1r1b3r5b1r3b2" + "b1r1b3r5b1r3b2",
+        "r1b1r4b1r7b2" + "r1b1r4b1r7b2",
+        "b1r12b2r1" + "b1r12b2r1",
+        "b1r7b1r4b2r1" + "b1r7b1r4b2r1",
+        "b1r3b1r7b3r1" + "b1r3b1r7b3r1",
+        "r5d7b2r1b1" + "r11b3r1b1",
+        "r2b1r2d1r1d3r2b1r1b1r1" + "r2b1r8b2r1b1r1",
+        "r5d1r1d3r2b1r1b1r1" + "r6b1r4b2r1b1r1",
+        "r5d3r1d2r1b2r2" + "r10b2r1b1r2",
+        "r2b1r2d2r1d1r1d1r1b2r1b1" + "r2b1r6b3r1b1r1b1",
+        "d2b1d3r1d3r2b1d1b1d1" + "d2b1d3b1d3b1d3b1d1",
+        "r3b1r1d1r1d3r2b1r2b1" + "r3b1r3b1r3b1r3b1",
+        "b5d3r1d2r1b4" + "b16",
+        "r2b3d2r1d1r1d1r1b1r3" + "r2b3d1r1b3r2b1r3",
+        "b5d1r1d3r2b1r3" + "b5d1r1b1r8",
+        "b2r3d1r1d3r2b1r2b1" + "b2r3b1r1b1r7b1",
+        "b1r1b3d3r1d2r1b1r1b2" + "b1r1b3d1b2r2b1r3b2",
+        "r1b1r3d2r1d1r1d1r1b1r1b2" + "r1b1r3d1r1b1r6b2",
+        "b1r4d1r1d3r2b3r1" + "b1r4b1r1b1r5b2r1",
+        "b1r4d1r1d3r2b3r1" + "b1r4d1b3r4b2r1",
+        "b1r3b1d3r1d2r1b3r1" + "b1r3b1d1r1b1r4b3r1",
+
+        "b16" + "b16",
+        "b16" + "b16",
+        "g16" + "g11b4g1",
+        "e16" + "e10g2b2g2",
+        "e16" + "e11g1b2g1e1",
+        "e4b1l1e6b1l1e2" + "e4g1l2e4g1b2g1e1",
+        "e2g1b4g1e2g1b4g1" + "e2g1b3l2e3g1b2g1e1",
+    ]
 )
 
 kirbysadventure_animation = animation_settings(
@@ -239,15 +286,16 @@ kirbysadventure_animation = animation_settings(
                  KirbyPuffedWalkRight03,
                  KirbyPuffedWalkRight02,],
                 ],
-    bg_sprites=[KirbysAdventureBG01],
+    bg_sprites=[KirbysAdventureBG01,
+                KirbysAdventureBG02],
     xoffs=[[0, 0, 0, 0, 0, 0],
            [0, 0, 0, 0, 0, 0],
           ],
     yoffs=[[2, 2, 2, 2, 2, 2],
            [-1, -1, -1, -1, -1, -1],
           ],
-    frame_time=0.055,
-    spbg_ratio=2,
+    frame_time=0.04,
+    spbg_ratio=3,
     center=True,
     bg_scroll_speed=(1, 0),
     cycles_per_char=5,

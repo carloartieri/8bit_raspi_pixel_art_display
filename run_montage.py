@@ -28,6 +28,7 @@ from sprites.excitebike import excitebike_animation
 from sprites.kirbysadventure import kirbysadventure_animation
 from sprites.lifeforce import lifeforce_animation
 from sprites.ducktales import ducktales_animation
+from sprites.ghostsandgoblins import ghostsandgoblins_animation
 
 def parse_arguments():
 
@@ -43,7 +44,7 @@ def parse_arguments():
                                      add_help=False,
                                      epilog=epilog,
                                      formatter_class=CustomFormatter)
-    
+
     opt = parser.add_argument_group("Optional arguments")
     opt.add_argument("-c", "--cycletime",
                      action="store",
@@ -73,9 +74,9 @@ def main():
     args = parse_arguments()
 
     shuffle = args.shuffle
-    
+
     scenes = [
-              zelda2_animation, 
+              zelda2_animation,
               finalfantasy_animation,
               megaman2_animation,
               ninjagaiden_animation,
@@ -88,29 +89,30 @@ def main():
               kirbysadventure_animation,
               lifeforce_animation,
               ducktales_animation,
+              ghostsandgoblins_animation,
              ]
 
     if shuffle:
         np.random.shuffle(scenes)
 
-    scenes = deque(scenes)  
-    
+    scenes = deque(scenes)
+
     #Clear the display in case anything's still on it.
     dispmatrix.Clear()
-    
+
     #Seed the display with black for the first transition
-    arr = display_sprite(dispmatrix=dispmatrix, 
-                         sprite=scenes[0].bg_sprites[0], 
-                         bg_sprite=None, 
+    arr = display_sprite(dispmatrix=dispmatrix,
+                         sprite=scenes[0].bg_sprites[0],
+                         bg_sprite=None,
                          center=True,
                          xoff=0,
                          yoff=0,
                          display=False)
     arr1 = np.full((arr.shape[0], arr.shape[1], 3), convert_hex_to_rgb_tuple("000000"), dtype=np.uint8)
 
-    while True:       
-        arr1 = animate_sprites(dispmatrix=dispmatrix, 
-                               sprite_list=scenes[0].sprite_list, 
+    while True:
+        arr1 = animate_sprites(dispmatrix=dispmatrix,
+                               sprite_list=scenes[0].sprite_list,
                                bg_sprites=scenes[0].bg_sprites,
                                xoffs=scenes[0].xoffs,
                                yoffs=scenes[0].yoffs,
