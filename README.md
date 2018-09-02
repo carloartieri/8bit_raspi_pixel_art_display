@@ -37,7 +37,7 @@ Note that all of the art included herein is intended as an homage to old-school 
 | *Castlevania 3: Dracula's Curse* | Konami | 1990 | Trevor, Grant, Sylpha | Wallachia Village, Murky Marsh |
 | *Super Mario Bros. 3* | Nintendo | 1990 | Tanooki Mario, Frog Mario| Plains, Ice Plains, Palace | 
 | *AD&D DragonStrike* | Westwood | 1992 | Red Dragon | Forest | 
-| *Kirby's Adventure* | HAL Laboratory | 1993 | Kirby, Kirby (puffball) | Whispy Woods |
+| *Kirby's Adventure* | HAL Laboratory | 1993 | Kirby, Kirby (puffball) | Whispy Woods, Rainbow Resort |
 
 
 ## Required hardware components
@@ -208,6 +208,7 @@ If you followed the steps above to install the code for the pixel art display, t
 
 - Added *Ghosts n' Goblins* animation routine with Armored Arthur and the Red Arremer sprites and two stage backgrounds.
 - Added standard bike sprite to the *Excitebike* animation routine and adjusted sprite animation speed.
+- Added additional background to the *Kirby's Adventure* animation routine and adjusted sprite animation speed.
 
 **2018.08.28**
 
