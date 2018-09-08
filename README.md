@@ -20,9 +20,10 @@ I'm regularly adding new games and sprites to the montage, so watch this repo if
 3. [Putting the hardware together](https://github.com/carloartieri/8bit_raspi_pixel_art_display#putting-the-hardware-together)
 4. [Setting up the software](https://github.com/carloartieri/8bit_raspi_pixel_art_display#setting-up-the-software)
 5. [Updating the code](https://github.com/carloartieri/8bit_raspi_pixel_art_display#updating-the-code)
-6. [Developing new sprites, scenes, etc.](https://github.com/carloartieri/8bit_raspi_pixel_art_display#developing-new-sprites-scenes-etc)
-7. [Credits, links, and resources](https://github.com/carloartieri/8bit_raspi_pixel_art_display#credits-links-and-resources)
-8. [Changelog](https://github.com/carloartieri/8bit_raspi_pixel_art_display#changelog-last-3)
+6. [Mounting the display](https://github.com/carloartieri/8bit_raspi_pixel_art_display#mounting-the-display) 
+7. [Developing new sprites, scenes, etc.](https://github.com/carloartieri/8bit_raspi_pixel_art_display#developing-new-sprites-scenes-etc)
+8. [Credits, links, and resources](https://github.com/carloartieri/8bit_raspi_pixel_art_display#credits-links-and-resources)
+9. [Changelog](https://github.com/carloartieri/8bit_raspi_pixel_art_display#changelog-last-3)
 
 ## Games currently featured in the montage
 
@@ -152,6 +153,14 @@ cd ..
 ```	
 
 Then run the animation routine as above.
+
+## Mounting the display
+
+To make the display presentable, I mounted the RGB LED matrix in a 5" x 5" (window), 1 3/4" deep 'shadow box' frame ([this one](http://www.michaels.com/s/MichaelsUS/studio-decor-mini-shadowbox-black-6x6in/10223092.html?productsource=PDPZ1) specifically). By cutting [black foamboard](http://www.michaels.com/elmers-black-foam-boards-16x20/10308906.html) with an X-acto knife and gluing everything with super-glue, I was able to center the matrix in the frame while leaving just enough space to place the Raspberry Pi behind it (it's a bit tight, but it works). All that was left to do was cut a small hole out of the back of the frame so that the power cable could pass through:
+
+![Mounting 1](images/mounting1.jpg)
+![Mounting 2](images/mounting2.jpg)
+![Mounting 3](images/mounting3.jpg)
 
 ## Developing new sprites, scenes, etc.
 All code in the repo was written in Python 3.5.3.
