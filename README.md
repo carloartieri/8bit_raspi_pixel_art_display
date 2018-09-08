@@ -156,7 +156,7 @@ Then run the animation routine as above.
 
 ## Mounting the display
 
-To make the display presentable, I mounted the RGB LED matrix in a 5" x 5" (window), 1 3/4" deep 'shadow box' frame ([this one](http://www.michaels.com/s/MichaelsUS/studio-decor-mini-shadowbox-black-6x6in/10223092.html?productsource=PDPZ1) specifically). By cutting [black foamboard](http://www.michaels.com/elmers-black-foam-boards-16x20/10308906.html) with an X-acto knife and gluing everything with super-glue, I was able to center the matrix in the frame while leaving just enough space to place the Raspberry Pi behind it (it's a bit tight, but it works). All that was left to do was cut a small hole out of the back of the frame so that the power cable could pass through:
+To make the display presentable, I mounted the RGB LED matrix in a 6" x 6" (5" X 5" internal), 1 3/4" deep 'shadow box' frame ([this one](http://www.michaels.com/s/MichaelsUS/studio-decor-mini-shadowbox-black-6x6in/10223092.html?productsource=PDPZ1) specifically). By cutting [black foamboard](http://www.michaels.com/elmers-black-foam-boards-16x20/10308906.html) with an X-acto knife and gluing everything with super-glue, I was able to center the matrix in the frame while leaving just enough space to place the Raspberry Pi behind it (it's a bit tight, but it works). All that was left to do was cut a small hole out of the back of the frame so that the power cable could pass through:
 
 ![Mounting 1](images/mounting1.jpg)
 ![Mounting 2](images/mounting2.jpg)
@@ -224,7 +224,7 @@ If you followed the steps above to install the code for the pixel art display, t
 
 - Added *Batman* animation routine with Batman and Shakedown sprites and Stage 1 and 3 backgrounds.
 - Added a `palette_swap()` method to the sprite class and used it to create Gold and Bronze dragon sprites in the *AD&D Dragon Strike* routine.
-- Minor documentation fixes.
+- Added description on how I mounted the display. Minor documentation fixes.
 
 **2018.09.01**
 
