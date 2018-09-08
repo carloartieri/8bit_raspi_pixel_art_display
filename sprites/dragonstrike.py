@@ -4,7 +4,7 @@ from settings import (NES_PALETTE_HEX, animation_settings)
 from core import sprite
 
 RedDragonNorthEast01 = sprite(
-    palette = { 
+    palette = {
         "b":NES_PALETTE_HEX[0, 13],
         "y":NES_PALETTE_HEX[2, 7],
         "r":NES_PALETTE_HEX[1, 7],
@@ -38,11 +38,25 @@ RedDragonNorthEast01 = sprite(
         "x3b1r1b1x26",
         "x2b1r1b1x27",
         "x3b1x28",
-    ]    
+    ]
 )
 
+GoldDragonNorthEast01 = RedDragonNorthEast01.swap_palette(
+    palette = {
+        "b":NES_PALETTE_HEX[0, 13],
+        "y":NES_PALETTE_HEX[3, 0],
+        "r":NES_PALETTE_HEX[2, 8],
+    },)
+
+BronzeDragonNorthEast01 = RedDragonNorthEast01.swap_palette(
+    palette = {
+        "b":NES_PALETTE_HEX[0, 13],
+        "y":NES_PALETTE_HEX[3, 0],
+        "r":NES_PALETTE_HEX[2, 1],
+    },)
+
 RedDragonNorthEast02 = sprite(
-    palette = { 
+    palette = {
         "b":NES_PALETTE_HEX[0, 13],
         "y":NES_PALETTE_HEX[2, 7],
         "r":NES_PALETTE_HEX[1, 7],
@@ -74,11 +88,25 @@ RedDragonNorthEast02 = sprite(
         "x2b1r1b1x18",
         "x1b1r1b1x19",
         "x2b1x20",
-    ]    
+    ]
 )
 
+GoldDragonNorthEast02 = RedDragonNorthEast02.swap_palette(
+    palette = {
+        "b":NES_PALETTE_HEX[0, 13],
+        "y":NES_PALETTE_HEX[3, 0],
+        "r":NES_PALETTE_HEX[2, 8],
+    },)
+
+BronzeDragonNorthEast02 = RedDragonNorthEast02.swap_palette(
+    palette = {
+        "b":NES_PALETTE_HEX[0, 13],
+        "y":NES_PALETTE_HEX[3, 0],
+        "r":NES_PALETTE_HEX[2, 1],
+    },)
+
 RedDragonNorthEast03 = sprite(
-    palette = { 
+    palette = {
         "b":NES_PALETTE_HEX[0, 13],
         "y":NES_PALETTE_HEX[2, 7],
         "r":NES_PALETTE_HEX[1, 7],
@@ -108,11 +136,25 @@ RedDragonNorthEast03 = sprite(
         "x1b1r2b1x18",
         "b1r1b2x19",
         "x1b1x21",
-    ]    
+    ]
 )
 
+GoldDragonNorthEast03 = RedDragonNorthEast03.swap_palette(
+    palette = {
+        "b":NES_PALETTE_HEX[0, 13],
+        "y":NES_PALETTE_HEX[3, 0],
+        "r":NES_PALETTE_HEX[2, 8],
+    },)
+
+BronzeDragonNorthEast03 = RedDragonNorthEast03.swap_palette(
+    palette = {
+        "b":NES_PALETTE_HEX[0, 13],
+        "y":NES_PALETTE_HEX[3, 0],
+        "r":NES_PALETTE_HEX[2, 1],
+    },)
+
 RedDragonNorthEast04 = sprite(
-    palette = { 
+    palette = {
         "b":NES_PALETTE_HEX[0, 13],
         "y":NES_PALETTE_HEX[2, 7],
         "r":NES_PALETTE_HEX[1, 7],
@@ -148,15 +190,29 @@ RedDragonNorthEast04 = sprite(
         "x1b1r1b1x25",
         "b1r1b1x26",
         "x1b1x27",
-    ]    
+    ]
 )
 
+GoldDragonNorthEast04 = RedDragonNorthEast04.swap_palette(
+    palette = {
+        "b":NES_PALETTE_HEX[0, 13],
+        "y":NES_PALETTE_HEX[3, 0],
+        "r":NES_PALETTE_HEX[2, 8],
+    },)
+
+BronzeDragonNorthEast04 = RedDragonNorthEast04.swap_palette(
+    palette = {
+        "b":NES_PALETTE_HEX[0, 13],
+        "y":NES_PALETTE_HEX[3, 0],
+        "r":NES_PALETTE_HEX[2, 1],
+    },)
+
 DragonStrikeBG01 = sprite(
-    palette = { 
+    palette = {
         "b":NES_PALETTE_HEX[0, 13],
         "g":NES_PALETTE_HEX[1, 9],
         "l":NES_PALETTE_HEX[2, 11],
-        "s":NES_PALETTE_HEX[0, 8],      
+        "s":NES_PALETTE_HEX[0, 8],
     },
     matrix = [
         "b1g7b1g3b1g15b1g3",
@@ -167,7 +223,7 @@ DragonStrikeBG01 = sprite(
         "g7b1g4b1g10l1g4b1g3",
         "g16b1g2b1g3b1g8",
         "g4b1g3b2g22",
-        
+
         "g8b5l1b1g17",
         "g6b1g2b1g1l2b4g1b1g2b1g10",
         "l1g1b1g6b2g1l1b2g1l1b2g5b1g3b1g3",
@@ -176,7 +232,7 @@ DragonStrikeBG01 = sprite(
         "g5b1g4b3g1b1g1l2g1l1g1l1g1b2g6b1",
         "g3b1g7b1g3l1b1g2l1b1l3b2g6",
         "g10b4g1b1l1g1l1b1g1l2b1g1l1b3g3",
-        
+
         "b1g7b1g2b2g1b2g1b1g1b1g1l1b2l2b1l1b2g1b1",
         "g10b1g1b5g1b1g1b5g1l3b2g1",
         "g4b1g1l1g7b2g2l1g1l1b1g1b1l1g2l1b1g1b1g1",
@@ -185,7 +241,7 @@ DragonStrikeBG01 = sprite(
         "g7b1g3s3b3g1b3g3b2l1b1g2b2",
         "g9s3b1s1b6g2l1g1b1l1b2l1g1b1g1",
         "g4b1g1s10b3g2l1g1b1l1g1b1g2b2g1",
-        
+
         "g2s13b2g1b1l1g1b2g1b1g2l1g1b1g2",
         "g5s6b1s2b7g1b2g1l1g2b2g1b1",
         "g4b1g2s2g1s6b4g1b1g1b1g1b2g1b1g3",
@@ -194,7 +250,7 @@ DragonStrikeBG01 = sprite(
         "g7b1g8s1b3g1b1g2b3g5",
         "g11b1g6b1g1b5g4b1g2",
         "g4b1g27",
-    ]    
+    ]
 )
 
 dragonstrike_animation = animation_settings(
@@ -202,11 +258,23 @@ dragonstrike_animation = animation_settings(
                   RedDragonNorthEast02,
                   RedDragonNorthEast03,
                   RedDragonNorthEast04],
+                 [GoldDragonNorthEast01,
+                  GoldDragonNorthEast02,
+                  GoldDragonNorthEast03,
+                  GoldDragonNorthEast04],
+                 [BronzeDragonNorthEast01,
+                  BronzeDragonNorthEast02,
+                  BronzeDragonNorthEast03,
+                  BronzeDragonNorthEast04],
                 ],
     bg_sprites=[DragonStrikeBG01],
     xoffs=[[-1, 4, 3, 0],
+           [-1, 4, 3, 0],
+           [-1, 4, 3, 0],
           ],
     yoffs=[[1, 3, 2, -1],
+           [1, 3, 2, -1],
+           [1, 3, 2, -1],
           ],
     frame_time=0.050,
     spbg_ratio=3,
