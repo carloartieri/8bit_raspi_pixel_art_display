@@ -2,7 +2,9 @@
 
 I've always thought that RGB LED panels would be perfect for displaying old-school pixel art. So I decided to work on a little project intended to highlight some of my favorite Nintendo Entertainment System gaming memories via a montage of short animations using actual NES sprites and background tiles. I hooked a Raspberry Pi to a 32 x 32 RGB LED display matrix, mounted it in a 'shadow box' frame, and wrote some code in Python to string together little vignettes: 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-g5i_7Ntjes?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+![MegaMan 2 Woodman Stage](images/example1.jpg)
+
+**Click [here](https://youtu.be/-g5i_7Ntjes) to see a YouTube video demoing what the final display looks like.** 
 
 The code chooses a random character and background from each game (see below), and animates them on a repeating 10 second loop (the specific time can be set by the user). By continuing to add new games as well as sprites an backgrounds to existing games, the setup can cycle through games for several minutes before repeating the same routine.
 
@@ -140,8 +142,7 @@ Next, we need to install the OS onto the microSD card and download all of the dr
 	
 	Note that mistyping the above command can prevent the Raspberry Pi from booting, so type it in carefully! In this case, you can simply unplug the Pi to stop the display and plug it back in to restart.
 
-![MegaMan 2 Woodman Stage](images/example1.jpg)
-	
+
 ## Updating the code
 
 When I get around to adding new animation routines, I'll update the Changelog below. In order to get these changes without having to redo a fresh install, you'll simply need to 'pull' the updates from github and relaunch the animation script. Upon logging into the Pi, run the following commands:
