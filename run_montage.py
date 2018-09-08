@@ -29,6 +29,7 @@ from sprites.kirbysadventure import kirbysadventure_animation
 from sprites.lifeforce import lifeforce_animation
 from sprites.ducktales import ducktales_animation
 from sprites.ghostsandgoblins import ghostsandgoblins_animation
+from sprites.batman import batman_animation
 
 def parse_arguments():
 
@@ -90,6 +91,7 @@ def main():
               lifeforce_animation,
               ducktales_animation,
               ghostsandgoblins_animation,
+              batman_animation,
              ]
 
     if shuffle:

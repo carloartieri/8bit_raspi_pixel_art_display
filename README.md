@@ -1,8 +1,10 @@
 # 8-bit Pixel Art Display Project
 
-I've always thought that RGB LED panels would be perfect for displaying old-school pixel art. So I decided to work on a little project intended to highlight some of my favorite Nintendo Entertainment System gaming memories via a montage of short animations using actual NES sprites and background tiles.
+I've always thought that RGB LED panels would be perfect for displaying old-school pixel art. So I decided to work on a little project intended to highlight some of my favorite Nintendo Entertainment System gaming memories via a montage of short animations using actual NES sprites and background tiles. I hooked a Raspberry Pi to a 32 x 32 RGB LED display matrix, mounted it in a 'shadow box' frame, and wrote some code in Python to string together little vignettes: 
 
-![MegaMan 2 Woodman Stage](images/example1.jpg)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-g5i_7Ntjes?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+The code chooses a random character and background from each game (see below), and animates them on a repeating 10 second loop (the specific time can be set by the user). By continuing to add new games as well as sprites an backgrounds to existing games, the setup can cycle through games for several minutes before repeating the same routine.
 
 Several folks have asked me to provide a description of how I built the project, so I've shared the animation code in this repo as well as a detailed guide below on how I set it all up. As I add more pixel art, I will continue to update this repo. I intend to provide better code documentation in the future as well, but what's here will allow people to reproduce the project.
 
@@ -10,15 +12,18 @@ This is a labor of love that I'm putting together on my spare time. I'm a data s
 
 Note that all of the art included herein is intended as an homage to old-school gaming, and is freely shared with the community under the [Creative Commons Attribution 4.0 International (CC BY 4.0) License](https://creativecommons.org/licenses/by/4.0/) (basically do whatever you want with it as long as you let people know where you got it). All characters, art, and other trademarks are the properties of their respective owners.
 
+I'm regularly adding new games and sprites to the montage, so watch this repo if you're interested in updates!
+
 ## Table of Contents
 1. [Games currently featured in the montage](https://github.com/carloartieri/8bit_raspi_pixel_art_display#games-currently-featured-in-the-montage)
 2. [Required hardware components](https://github.com/carloartieri/8bit_raspi_pixel_art_display#required-hardware-components)
 3. [Putting the hardware together](https://github.com/carloartieri/8bit_raspi_pixel_art_display#putting-the-hardware-together)
 4. [Setting up the software](https://github.com/carloartieri/8bit_raspi_pixel_art_display#setting-up-the-software)
 5. [Updating the code](https://github.com/carloartieri/8bit_raspi_pixel_art_display#updating-the-code)
-6. [Developing new sprites, scenes, etc.](https://github.com/carloartieri/8bit_raspi_pixel_art_display#developing-new-sprites-scenes-etc)
-7. [Credits, links, and resources](https://github.com/carloartieri/8bit_raspi_pixel_art_display#credits-links-and-resources)
-8. [Changelog](https://github.com/carloartieri/8bit_raspi_pixel_art_display#changelog-last-3)
+6. [Mounting the display](https://github.com/carloartieri/8bit_raspi_pixel_art_display#mounting-the-display) 
+7. [Developing new sprites, scenes, etc.](https://github.com/carloartieri/8bit_raspi_pixel_art_display#developing-new-sprites-scenes-etc)
+8. [Credits, links, and resources](https://github.com/carloartieri/8bit_raspi_pixel_art_display#credits-links-and-resources)
+9. [Changelog](https://github.com/carloartieri/8bit_raspi_pixel_art_display#changelog-last-3)
 
 ## Games currently featured in the montage
 
@@ -27,16 +32,17 @@ Note that all of the art included herein is intended as an homage to old-school 
 | *Excitebike* | Nintendo | 1985 | Bike (Standard), Bike (Wheelie) | Track 1, Track 3 |
 | *Ghosts 'n Goblins* | Capcom | 1985 | Arthur (Armored), Red Arremer | Cave, City |
 | *LifeForce* | Konami | 1987 | Vic Viper, Lord British | Area 1, Area 1 (alt) |
-| *Blaster Master* | Sunsoft | 1988  | Sophia, Jake (overworld) | Area 1, Area 3 |
+| *Blaster Master* | Sunsoft | 1988  | Sophia, Jake (Overworld) | Area 1, Area 3 |
 | *Zelda 2: The Adventure of Link* | Nintendo | 1988 | Link, Blue IronKnuckle | Island Palace, Woods |
-| *Dragon Warrior* | Enix | 1989 | Hero & Princess, King, Dragon Lord | Alefgard, Plains |
+| *Dragon Warrior* | Enix | 1989 | Hero & Princess, King, Dragon Lord | Plains, Town |
 | *Ducktales* | Capcom | 1989 | Scrooge McDuck, Native | Amazon, Moon |
 | *Mega Man 2* | Capcom | 1989 | Mega Man, Crash Man, Metal Man | Wood Man, Flash Man |
 | *Ninja Gaiden* | Tecmo | 1989 | Ryu | Area 1, Area 4 |
+| *Batman* | Sunsoft | 1990 | Batman, Shakedown | Stage 1, Stage 3 |
 | *Final Fantasy* | Square | 1990 | Fighter, Monk, White Mage, Black Mage | Corneria, Flying Fortress |
 | *Castlevania 3: Dracula's Curse* | Konami | 1990 | Trevor, Grant, Sylpha | Wallachia Village, Murky Marsh |
 | *Super Mario Bros. 3* | Nintendo | 1990 | Tanooki Mario, Frog Mario| Plains, Ice Plains, Palace | 
-| *AD&D DragonStrike* | Westwood | 1992 | Red Dragon | Forest | 
+| *AD&D DragonStrike* | Westwood | 1992 | Red, Gold, Bronze Dragons | Forest | 
 | *Kirby's Adventure* | HAL Laboratory | 1993 | Kirby, Kirby (puffball) | Whispy Woods, Rainbow Resort |
 
 
@@ -58,7 +64,7 @@ I've listed the components used to build the display below. It may be possible t
 - [32 x 32 RGB LED Matrix Panel](https://www.adafruit.com/product/607) - Adafruit has a number of different available pixel sizes, I used the '4 mm pitch'.
 - [5V 4A Switching Power Supply](https://www.adafruit.com/product/1466) - Both the Pi and the display should be independently powered.
 - [Adafruit RGB Matrix HAT](https://learn.adafruit.com/adafruit-rgb-matrix-plus-real-time-clock-hat-for-raspberry-pi)
-	- The RGB Matrix HAT makes wiring the RGB LED Matrix to the Raspberry Pi very straighforward; however, **it does require some light soldering**. I was able to do this by buying a [cheap soldering iron](https://www.adafruit.com/product/180), and [this solder](https://www.adafruit.com/product/1930). I also found [Getting Started with Soldering](https://www.adafruit.com/product/3715) by Marc De Vinck very helpful. 
+	- The RGB Matrix HAT makes wiring the RGB LED Matrix to the Raspberry Pi very straightforward; however, **it does require some light soldering**. I was able to do this by buying a [cheap soldering iron](https://www.adafruit.com/product/180), and [this solder](https://www.adafruit.com/product/1930). I also found [Getting Started with Soldering](https://www.adafruit.com/product/3715) by Marc De Vinck very helpful. 
 - [CR1220 coin cell battery](https://www.amazon.com/Energizer-CR1220-Drain-lithuim-Battery/dp/B003CU3E2Q/ref=sr_1_3?ie=UTF8&qid=1532292025&sr=8-3&keywords=cr1220+battery) (for the RGB Matrix HAT)	
 
 ## Putting the hardware together
@@ -81,11 +87,11 @@ Next, we need to install the OS onto the microSD card and download all of the dr
 	
 	I used version 1.9.4 of ApplePi-Baker, which can be downloaded directly [here](https://www.tweaking4all.com/?wpfb_dl=94).
 	
-	If Windows users have a simmilar easy-to-use bootable SD crad creator, please send me a message ([@DocBrownPhd](https://twitter.com/DocBrownPhD)) and I'll put it here. 
+	If Windows users have a similar easy-to-use bootable SD card creator, please send me a message ([@DocBrownPhd](https://twitter.com/DocBrownPhD)) and I'll put it here. 
 
 3. **Set up the Raspberry Pi**
 	
-	Make sure that neither the Raspberry Pi nor the RGB HAT is plugged in. Pop in the microSD card,  then make sure that the unit is connected via HDMI to a monitor and to a keyboard via USB. Plug the power cable into the 5V plug on the HAT as well as the smaller power cable into the Rasberry Pi and allow the unit to boot to the login. The default username is `pi` and the password is `raspberry`. This should get you to the linux command line.
+	Make sure that neither the Raspberry Pi nor the RGB HAT is plugged in. Pop in the microSD card,  then make sure that the unit is connected via HDMI to a monitor and to a keyboard via USB. Plug the power cable into the 5V plug on the HAT as well as the smaller power cable into the Raspberry Pi and allow the unit to boot to the login. The default username is `pi` and the password is `raspberry`. This should get you to the linux command line.
 		
 	The first step is to run the following command, which will bring up the Raspberry Pi configuration menu:
 	
@@ -133,6 +139,8 @@ Next, we need to install the OS onto the microSD card and download all of the dr
 		sudo /usr/bin/python3 /home/pi/8bit_raspi_pixel_art_display/run_montage.py --cycletime 30 --shuffle &
 	
 	Note that mistyping the above command can prevent the Raspberry Pi from booting, so type it in carefully! In this case, you can simply unplug the Pi to stop the display and plug it back in to restart.
+
+![MegaMan 2 Woodman Stage](images/example1.jpg)
 	
 ## Updating the code
 
@@ -145,6 +153,14 @@ cd ..
 ```	
 
 Then run the animation routine as above.
+
+## Mounting the display
+
+To make the display presentable, I mounted the RGB LED matrix in a 6" x 6" (5" X 5" internal), 1 3/4" deep 'shadow box' frame ([this one](http://www.michaels.com/s/MichaelsUS/studio-decor-mini-shadowbox-black-6x6in/10223092.html?productsource=PDPZ1) specifically). By cutting [black foamboard](http://www.michaels.com/elmers-black-foam-boards-16x20/10308906.html) with an X-acto knife and gluing everything with super-glue, I was able to center the matrix in the frame while leaving just enough space to place the Raspberry Pi behind it (it's a bit tight, but it works). All that was left to do was cut a small hole out of the back of the frame so that the power cable could pass through:
+
+![Mounting 1](images/mounting1.jpg)
+![Mounting 2](images/mounting2.jpg)
+![Mounting 3](images/mounting3.jpg)
 
 ## Developing new sprites, scenes, etc.
 All code in the repo was written in Python 3.5.3.
@@ -204,6 +220,12 @@ If you followed the steps above to install the code for the pixel art display, t
 
 ## Changelog (last 3)
 
+**2018.09.08**
+
+- Added *Batman* animation routine with Batman and Shakedown sprites and Stage 1 and 3 backgrounds.
+- Added a `palette_swap()` method to the sprite class and used it to create Gold and Bronze dragon sprites in the *AD&D Dragon Strike* routine.
+- Added description on how I mounted the display. Minor documentation fixes.
+
 **2018.09.01**
 
 - Added *Ghosts n' Goblins* animation routine with Armored Arthur and the Red Arremer sprites and two stage backgrounds.
@@ -214,10 +236,5 @@ If you followed the steps above to install the code for the pixel art display, t
 
 - Updated Jupyter notebook `development_examples.ipynb` with animation instructions in addition to instructions on how to add new animations to the montage.
 - Added a Table of Contents to the README.md.
-
-**2018.08.23**
-
-- Added a description of how to launch Jupyter to the README file.
-- Added an Jupyter notebook `development_examples.ipynb` containing descriptions and examples of how to create and draw sprites. Animation descriptions to follow.
 
 See [complete Changelog here](changelog.md).

@@ -1,5 +1,10 @@
 ## Complete Changelog
 
+**2018.08.23**
+
+- Added a description of how to launch Jupyter to the README file.
+- Added an Jupyter notebook `development_examples.ipynb` containing descriptions and examples of how to create and draw sprites. Animation descriptions to follow.
+
 **2018.08.19**
 
 - Added *LifeForce* animation routine with Vic Viper and Lord British ships and two backgrounds from area 1.
