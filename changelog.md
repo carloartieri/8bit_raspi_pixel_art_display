@@ -1,5 +1,10 @@
 ## Complete Changelog
 
+**2018.08.28**
+
+- Updated Jupyter notebook `development_examples.ipynb` with animation instructions in addition to instructions on how to add new animations to the montage.
+- Added a Table of Contents to the README.md.
+
 **2018.08.23**
 
 - Added a description of how to launch Jupyter to the README file.

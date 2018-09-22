@@ -30,6 +30,7 @@ from sprites.lifeforce import lifeforce_animation
 from sprites.ducktales import ducktales_animation
 from sprites.ghostsandgoblins import ghostsandgoblins_animation
 from sprites.batman import batman_animation
+from sprites.metalgear import metalgear_animation
 
 def parse_arguments():
 
@@ -92,6 +93,7 @@ def main():
               ducktales_animation,
               ghostsandgoblins_animation,
               batman_animation,
+              metalgear_animation,
              ]
 
     if shuffle:
