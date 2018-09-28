@@ -93,7 +93,7 @@ def main():
               finalfantasy_animation,
               castlevania3_animation,
               smb3_animation,
-              kabukiquantumfighter_animation
+              kabukiquantumfighter_animation,
               dragonstrike_animation,
               kirbysadventure_animation,
              ]
