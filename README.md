@@ -44,7 +44,8 @@ I'm regularly adding new games and sprites to the montage, so watch this repo if
 | *Batman* | Sunsoft | 1990 | Batman, Shakedown | Stage 1, Stage 3 |
 | *Final Fantasy* | Square | 1990 | Fighter, Monk, White Mage, Black Mage | Corneria, Flying Fortress |
 | *Castlevania 3: Dracula's Curse* | Konami | 1990 | Trevor, Grant, Sylpha | Wallachia Village, Murky Marsh |
-| *Super Mario Bros. 3* | Nintendo | 1990 | Tanooki Mario, Frog Mario| Plains, Ice Plains, Palace | 
+| *Super Mario Bros. 3* | Nintendo | 1990 | Tanooki Mario, Frog Mario| Plains, Ice Plains, Palace |
+| *Kabuki Quantum Fighter* | Human Entertainment | 1991 | Col. O'Connor | Stage 1, Stage 2 | 
 | *AD&D DragonStrike* | Westwood | 1992 | Red, Gold, Bronze Dragons | Forest | 
 | *Kirby's Adventure* | HAL Laboratory | 1993 | Kirby, Kirby (puffball) | Whispy Woods, Rainbow Resort |
 
@@ -222,9 +223,11 @@ If you followed the steps above to install the code for the pixel art display, t
 
 ## Changelog (last 3)
 
-**2018.09.XX**
+**2018.09.27**
 
 - Added *Metal Gear* animation routine with Unarmed and Armed Solid Snake sprites and building 1 interior and roof backgrounds.
+- Added *Kabuki Quantum Fighter* animation routine with Col. Scott O'Connor sprite and stage 1 and 2 backgrounds.
+- Reordered the default order of animation routines in rough chronological order (by year).
 
 **2018.09.08**
 
