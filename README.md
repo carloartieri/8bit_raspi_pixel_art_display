@@ -35,6 +35,7 @@ I'm regularly adding new games and sprites to the montage, so watch this repo if
 | *Ghosts 'n Goblins* | Capcom | 1985 | Arthur (Armored), Red Arremer | Cave, City |
 | *LifeForce* | Konami | 1987 | Vic Viper, Lord British | Area 1, Area 1 (alt) |
 | *Blaster Master* | Sunsoft | 1988  | Sophia, Jake (Overworld) | Area 1, Area 3 |
+| *Metal Gear* | Ultra (Konami) | 1988 | Snake (Unarmed, Armed) | Bldg 1 interior, roof | 
 | *Zelda 2: The Adventure of Link* | Nintendo | 1988 | Link, Blue IronKnuckle | Island Palace, Woods |
 | *Dragon Warrior* | Enix | 1989 | Hero & Princess, King, Dragon Lord | Plains, Town |
 | *Ducktales* | Capcom | 1989 | Scrooge McDuck, Native | Amazon, Moon |
@@ -43,7 +44,8 @@ I'm regularly adding new games and sprites to the montage, so watch this repo if
 | *Batman* | Sunsoft | 1990 | Batman, Shakedown | Stage 1, Stage 3 |
 | *Final Fantasy* | Square | 1990 | Fighter, Monk, White Mage, Black Mage | Corneria, Flying Fortress |
 | *Castlevania 3: Dracula's Curse* | Konami | 1990 | Trevor, Grant, Sylpha | Wallachia Village, Murky Marsh |
-| *Super Mario Bros. 3* | Nintendo | 1990 | Tanooki Mario, Frog Mario| Plains, Ice Plains, Palace | 
+| *Super Mario Bros. 3* | Nintendo | 1990 | Tanooki Mario, Frog Mario| Plains, Ice Plains, Palace |
+| *Kabuki Quantum Fighter* | Human Entertainment | 1991 | Col. O'Connor | Stage 1, Stage 2 | 
 | *AD&D DragonStrike* | Westwood | 1992 | Red, Gold, Bronze Dragons | Forest | 
 | *Kirby's Adventure* | HAL Laboratory | 1993 | Kirby, Kirby (puffball) | Whispy Woods, Rainbow Resort |
 
@@ -221,6 +223,12 @@ If you followed the steps above to install the code for the pixel art display, t
 
 ## Changelog (last 3)
 
+**2018.09.27**
+
+- Added *Metal Gear* animation routine with Unarmed and Armed Solid Snake sprites and building 1 interior and roof backgrounds.
+- Added *Kabuki Quantum Fighter* animation routine with Col. Scott O'Connor sprite and stage 1 and 2 backgrounds.
+- Reordered the default order of animation routines in rough chronological order (by year).
+
 **2018.09.08**
 
 - Added *Batman* animation routine with Batman and Shakedown sprites and Stage 1 and 3 backgrounds.
@@ -232,10 +240,5 @@ If you followed the steps above to install the code for the pixel art display, t
 - Added *Ghosts n' Goblins* animation routine with Armored Arthur and the Red Arremer sprites and two stage backgrounds.
 - Added standard bike sprite to the *Excitebike* animation routine and adjusted sprite animation speed.
 - Added additional background to the *Kirby's Adventure* animation routine and adjusted sprite animation speed.
-
-**2018.08.28**
-
-- Updated Jupyter notebook `development_examples.ipynb` with animation instructions in addition to instructions on how to add new animations to the montage.
-- Added a Table of Contents to the README.md.
 
 See [complete Changelog here](changelog.md).

@@ -30,6 +30,8 @@ from sprites.lifeforce import lifeforce_animation
 from sprites.ducktales import ducktales_animation
 from sprites.ghostsandgoblins import ghostsandgoblins_animation
 from sprites.batman import batman_animation
+from sprites.metalgear import metalgear_animation
+from sprites.kabukiquantumfighter import kabukiquantumfighter_animation
 
 def parse_arguments():
 
@@ -77,21 +79,23 @@ def main():
     shuffle = args.shuffle
 
     scenes = [
+              excitebike_animation,
+              ghostsandgoblins_animation,
+              lifeforce_animation,
+              blastermaster_animation,
+              metalgear_animation,
               zelda2_animation,
-              finalfantasy_animation,
+              dragonwarrior_animation,
+              ducktales_animation,
               megaman2_animation,
               ninjagaiden_animation,
-              blastermaster_animation,
-              dragonwarrior_animation,
-              smb3_animation,
-              castlevania3_animation,
-              dragonstrike_animation,
-              excitebike_animation,
-              kirbysadventure_animation,
-              lifeforce_animation,
-              ducktales_animation,
-              ghostsandgoblins_animation,
               batman_animation,
+              finalfantasy_animation,
+              castlevania3_animation,
+              smb3_animation,
+              kabukiquantumfighter_animation,
+              dragonstrike_animation,
+              kirbysadventure_animation,
              ]
 
     if shuffle:
